@@ -1,23 +1,195 @@
 @import 'main.less';
 
 .g-index-content{
+  padding: 50px 0 0 0;
+  &.bg-eee{
+    background: #eeeeee;
+  }
   .m-title{
+    border-bottom: 1px solid @color-main;
     .u-title{
-
+      width: 160px;
+      line-height: 50px;
+      background: @color-main;
+      font-size: @font-size-xxxl;
+      color: #FFF;
+      text-align: center;
     }
     .u-more{
-      .btn{
+      font-size: @font-size-xxl;
+      .u-title-en{
+        display: inline-block;
+        line-height: 48px;
+      }
+      a.u-btn{
+        display: inline-block;
         float: right;
-        a{
+        border:1px solid @color-main;
+        border-radius: 40px;
+        padding: 0 20px;
+        color: @color-main;
+        &:hover{
+          text-decoration: none;
+        }
+        span {
           display: inline-block;
-          border:1px solid @color-main;
-          border-radius: 60px;
-          padding: 10px 20px;
-          color:@color-main;
-          &:hover{
-            text-decoration: none;
+          line-height: 40px;
+          vertical-align: middle;
+          &.u-plus{
+            font-size: 32px;
+            line-height: 40px;
           }
         }
+      }
+    }
+  }
+  .m-menu{
+    span{
+      display: inline;
+      line-height: 50px;
+      padding: 0 10px;
+      border-right: 2px solid @color-main;
+      &.on{
+        color: @color-main;
+      }
+      &:last-child{
+        border-right:0;
+      }
+    }
+  }
+  .m-content{
+    .u-content{
+      background: #FFF;
+      padding: 0;
+      margin: 0 10px;
+      .u-img{
+
+      }
+      .u-info{
+        padding: 18px;
+        .u-title{
+          font-size: @font-size-xl;
+          color: #39434b;
+          a{
+            color: #39434b;
+          }
+        }
+        .u-intro{
+          font-size: @font-size-md;
+          color: #727171;
+          a{
+            color: #727171;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+.g-teacher-recommend {
+  padding: 50px 0 0 0;
+  .m-title{
+    border-bottom: 1px solid @color-main;
+    .u-title{
+      width: 160px;
+      line-height: 50px;
+      background: @color-main;
+      font-size: @font-size-xxxl;
+      color: #FFF;
+      text-align: center;
+    }
+    .u-more{
+      font-size: @font-size-xxl;
+      .u-title-en{
+        display: inline-block;
+        line-height: 48px;
+      }
+      a.u-btn{
+        display: inline-block;
+        float: right;
+        border:1px solid @color-main;
+        border-radius: 40px;
+        padding: 0 20px;
+        color: @color-main;
+        &:hover{
+          text-decoration: none;
+        }
+        span {
+          display: inline-block;
+          line-height: 40px;
+          vertical-align: middle;
+          &.u-plus{
+            font-size: 32px;
+            line-height: 40px;
+          }
+        }
+      }
+    }
+  }
+  .m-content{
+    .u-content{
+      padding: 0;
+      margin: 0 10px;
+      overflow: hidden;
+      background-color: @color-main;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      height: 530px;
+      .u-info{
+        text-align: center;
+        padding: 18px;
+        background: url(/public/images/bg-maincolor-translucent.png);
+        margin: 430px 0 0 0;
+        height: 530px;
+        .u-name{
+          font-size: @font-size-xl;
+          color: #fff;
+          a{
+            color: #fff;
+          }
+        }
+        .u-title{
+          font-size: @font-size-md;
+          color: #fff;
+          a{
+            color: #fff;
+          }
+        }
+        .u-edu{
+          font-size: @font-size-md;
+          color: #fff;
+          a{
+            color: #fff;
+          }
+        }
+        .u-intro{
+          font-size: @font-size-md;
+          color: #fff;
+          a{
+            color: #fff;
+          }
+        }
+
+      }
+      .u-btn {
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 28px;
+        color: @color-main;
+        border: solid 1px @color-main;
+        display: block;
+        right: 15px;
+        top: 15px;
+        font-size: 30px;
+      }
+      .u-btn-light {
+        color: #fff;
+        border: solid 1px #fff;
+      }
+      .pos_a {
+        position: absolute;
       }
     }
   }
