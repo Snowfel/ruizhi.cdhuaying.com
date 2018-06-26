@@ -97,18 +97,23 @@ h5 {
     height: 94px;
     background: url(/public/images/icon/logo-hy-ruizhi.png) no-repeat left center;
   }
-  .m-menu{
-    a{
-      font-size: @font-size-xl;
-      display: inline-block;
-      color: #000;
-      line-height: 92px;
-      padding: 0 5px;
-      border-bottom: 2px #fff solid;
-      &:hover {
-        color: @color-main;
-        text-decoration: none;
-        border-bottom: 2px @color-main solid;
+  .navbar-nav-scroll{
+    .navbar-nav{
+      .nav-item{
+        padding: 0 10px;
+        a{
+          font-size: @font-size-xl;
+          display: inline-block;
+          color: #000;
+          line-height: 92px;
+          padding: 10px 5px;
+          border-bottom: 2px #fff solid;
+          &:hover {
+            color: @color-main;
+            text-decoration: none;
+            border-bottom: 2px @color-main solid;
+          }
+        }
       }
     }
   }

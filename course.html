@@ -56,16 +56,30 @@
         <div class="m-logo"></div>
       </div>
       <div class="col-sm-8">
-        <div class="container-fluid">
-          <div class="m-menu row">
-            <div class="col"><a href="/">首页</a></div>
-            <div class="col"><a href="/">课程体系</a></div>
-            <div class="col"><a href="/">近期开班</a></div>
-            <div class="col"><a href="/">教研团队</a></div>
-            <div class="col"><a href="/">热门活动</a></div>
-            <div class="col"><a href="/">资料下载</a></div>
-            <div class="col"><a href="/">关于我们</a></div>
-          </div>
+        <div class="navbar-nav-scroll">
+          <ul class="navbar-nav bd-navbar-nav flex-row">
+            <li class="nav-item">
+              <a href="/">首页</a>
+            </li>
+            <li class="nav-item">
+              <a href="/">课程体系</a>
+            </li>
+            <li class="nav-item">
+              <a href="/">近期开班</a>
+            </li>
+            <li class="nav-item">
+              <a href="/">教研团队</a>
+            </li>
+            <li class="nav-item">
+              <a href="/">热门活动</a>
+            </li>
+            <li class="nav-item">
+              <a href="/">资料下载</a>
+            </li>
+            <li class="nav-item">
+              <a href="/">关于我们</a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -129,82 +143,105 @@
   <div class="container">
     <h1>戏剧+英语 多元智能同步提升教学体系</h1>
     <div class="m-content">
-      <div class="item item-success">ESCA</div>
+      <div>
+        <div class="item item-esca">ESCA</div>
+        <div class="item item-harvard">哈佛少儿英语</div>
+        <div class="item item-opera">戏剧情境教学</div>
+        <div class="item item-3-6">Smart English<br>3-6岁</div>
+        <div class="item item-7-12">Genius English<br>7-12岁</div>
+        <div class="item item-12part"><span style="font-size:24px">12项</span><br><span style="font-size:18px">戏剧能力特训</span></div>
+        <div class="item item-6part"><span style="font-size:24px">6大</span><span style="font-size:18px">核心</span><br><span style="font-size:18px">戏剧排演课程</span></div>
+      </div>
     </div>
   </div>
 </div>
 
 <script type="text/javascript">
-    //====================================
-    $('#app0').on('mouseenter', function(e) {
-        //显示提示
-
-        mTips.s('通过js控制的提示,并带有回调函数', function() {
-            $('.item').css('height', '70px');
-        });
-    });
-
-    $('#app0').on('mouseleave', function(e) {
-        //移除提示
-        mTips.h(function() {
-            $('.item').css('height', '50px');
-        });
-    });
-
-    //====================================
     //js设置样式
-    $('.item-success').on('mouseenter', function(e) {
-        //显示提示
+    $('.item-esca').on('mouseenter', function(e) {
+        mTips.c.x = 30;
+        mTips.c.y = -310;
+        mTips.s('<div class="row m-tips-esca">' +
+            '<div class="col m-word m-word1"><p></p><div class="u-word1">英语语言开发</div></div>' +
+            '<div class="col m-word m-word2"><p></p><div class="u-word2">社交养成</div></div>' +
+            '<div class="col m-word m-word3"><p></p><div class="u-word3">认知能力提升</div></div>' +
+            '<div class="col m-word m-word4"><p></p><div class="u-word4">审美培养</div></div>' +
+            '</div>', '');
+    }).on('mouseleave', function(e) {
+        mTips.h();
         mTips.c.x = 10;
         mTips.c.y = 10;
-        mTips.s('<div class="row m-tips-esca"><div class="col u-word1">英语语言开发</div><div class="col">社交养成</div><div class="col">认知能力提升</div><div class="col">审美培养</div></div>', '');
+    });
+    $('.item-harvard').on('mouseenter', function(e) {
+        mTips.c.x = 30;
+        mTips.c.y = -310;
+        mTips.s('<div class="row m-tips-harvard">' +
+            '<div class="col m-word m-word1">作为多年成熟的教学体系，赋予孩子英语词汇、语句、表达等多方位的互动教学，为戏剧英语学习提供知识储备。</div>' +
+            '</div>', '');
+    }).on('mouseleave', function(e) {
+        mTips.h();
+        mTips.c.x = 10;
+        mTips.c.y = 10;
+    });
+    $('.item-opera').on('mouseenter', function(e) {
+        mTips.c.x = 30;
+        mTips.c.y = -310;
+        mTips.s('<div class="row m-tips-opera">' +
+            '<div class="col m-word m-word1"><p>100个</p><div class="u-word1">基本戏剧元素训练</div><div class="u-word2">Performance Skill</div></div>' +
+            '<div class="col m-word m-word2"><p>50个</p><div class="u-word2">主题表演训练</div><div class="u-word2">Situation English</div></div>' +
+            '<div class="col m-word m-word3"><p>10项</p><div class="u-word3">剧目排演训练</div><div class="u-word2">Rehearsal</div></div>' +
+            '</div>', '');
+    }).on('mouseleave', function(e) {
+        mTips.h();
+        mTips.c.x = 10;
+        mTips.c.y = 10;
+    });
+    $('.item-3-6').on('mouseenter', function(e) {
+        mTips.c.x = 30;
+        mTips.c.y = -310;
+        mTips.s('<div class="row m-tips-3-6">' +
+            '<div class="col m-word m-word1">专为3-6岁儿童打造的学前英语全能课程。整套课程由特邀来自美、英、中三国语言学习专家联合编著，融合最新的儿童发展及语言习得理论。原汁原味的创意教材融合互动游戏，生动视频等现代科技，全面激发孩子的学习兴趣和创造能力，被誉为21世纪幼教机构和幼儿园的最佳学前美语课程。</div>' +
+            '</div>', '');
+    }).on('mouseleave', function(e) {
+        mTips.h();
+        mTips.c.x = 10;
+        mTips.c.y = 10;
+    });
+    $('.item-7-12').on('mouseenter', function(e) {
+        mTips.c.x = 30;
+        mTips.c.y = -310;
+        mTips.s('<div class="row m-tips-7-12">' +
+            '<div class="col m-word m-word1">专为7-12岁的中国孩子度身打造，以国际化的理念和先进科技引领教育创新，在提升孩子英语能力的同时，着重培养孩子沟通能力、协作能力、创造能力、思辨能力、学习力等21世纪核心能力，成就拥有丰富知识和全球视野的世界公民，未来领袖。</div>' +
+            '</div>', '');
     }).on('mouseleave', function(e) {
         mTips.h();
         mTips.c.x = 10;
         mTips.c.y = 10;
     });
 
-    //====================================
-    //js设置样式
-    $('.item-warning').on('mouseenter', function(e) {
-        //显示提示
-        mTips.s('通过js设置样式，并带有回调函数', 'warning', function() {
-            $('.item').css('width', '200px');
-        });
-    });
-
-    $('.item-warning').on('mouseleave', function(e) {
-        //移除提示
-        mTips.h(function() {
-            $('.item').css('width', '50px');
-        });
-    });
-
-    //====================================
-    //js设置样式
-    $('.item-danger').on('mouseenter', function(e) {
-        //显示提示
-        mTips.s('通过js设置样式 ', 'danger ', function() {
-            $('.item').css('border-radius', '50%');
-
-        });
-    });
-
-    $('.item-danger').on('mouseleave', function(e) {
-        //移除提示
-        mTips.h(function() {
-            $('.item').css('border-radius', '5px');
-        });
-    });
-
-    //函数库调用结束
-    //====================================
-    //自定义样式项，与函数库无关
-    $(document).on('mousemove', function(e) {
-        var h = parseInt(50 + (e.pageY / 100));
-
-        //				$('.item').css('height', h + 'px');
-
+    $('.item-12part').on('mouseenter', function(e) {
+        mTips.c.x = 30;
+        mTips.c.y = -310;
+        mTips.s('<div class="row m-tips-12part">' +
+            '<div class="col m-word m-word1"><p>1</p><div class="u-word1">Concentration</div><div class="u-word2">注意力训练</div></div>' +
+            '<div class="col m-word m-word2"><p>2</p><div class="u-word1">Muscle Control</div><div class="u-word2">控制力训练</div></div>' +
+            '<div class="col m-word m-word3"><p>3</p><div class="u-word1">Imagination</div><div class="u-word2">想象力训练</div></div>' +
+            '<div class="col m-word m-word4"><p>4</p><div class="u-word1">Emotional Memory</div><div class="u-word2">情绪记忆训练</div></div>' +
+            '</div><div class="row m-tips-12part">' +
+            '<div class="col m-word m-word5"><p>5</p><div class="u-word1">Mission Training</div><div class="u-word2">舞台任务训练</div></div>' +
+            '<div class="col m-word m-word6"><p>6</p><div class="u-word1">Speed &amp; Rhythm</div><div class="u-word2">速度与节奏训练</div></div>' +
+            '<div class="col m-word m-word7"><p>7</p><div class="u-word1">Observation Lives</div><div class="u-word2">日常观察力训练</div></div>' +
+            '<div class="col m-word m-word8"><p>8</p><div class="u-word1">Truth &amp; Faith</div><div class="u-word2">舞台信念感训练</div></div>' +
+            '</div><div class="row m-tips-12part">' +
+            '<div class="col m-word m-word9"><p>9</p><div class="u-word1">Given Circumstance Training</div><div class="u-word2">规定情境训练</div></div>' +
+            '<div class="col m-word m-word10"><p>10</p><div class="u-word1">Non Physical Performance</div><div class="u-word2">无实物表演训练</div></div>' +
+            '<div class="col m-word m-word11"><p>11</p><div class="u-word1">Communication &amp; Adaptation</div><div class="u-word2">信任感及舞台协作</div></div>' +
+            '<div class="col m-word m-word12"><p>12</p><div class="u-word1">Animal Imitation Sketch</div><div class="u-word2">动物模仿小品</div></div>' +
+            '</div>', '');
+    }).on('mouseleave', function(e) {
+        mTips.h();
+        mTips.c.x = 10;
+        mTips.c.y = 10;
     });
 </script>
 
