@@ -4,7 +4,24 @@
 }
 
 .g-event-hot {
-
+  .card {
+    border: 0;
+    h3 {
+      font-size: 20px;
+      color: #39434b;
+      line-height: 50px;
+    }
+    .x {
+      color: #727171;
+    }
+    .btn {
+      color: #fff;
+      background: @color-main;
+      border: 0;
+      border-radius: 20px;
+      font-size: 15px;
+    }
+  }
 }
 
 .g-event-report {
@@ -12,6 +29,15 @@
     font-size: @font-size-xl;
     line-height: @font-size-xxxl * 1.5;
     border-bottom: 1px solid #bbbbbd;
+  }
+  .m-video {
+    .m-content {
+      color: @color-gray-dark;
+      border-bottom: 9px solid #989898;
+      div{
+        font-size: @font-size-lg;
+      }
+    }
   }
   .m-performer {
     .row {
@@ -33,4 +59,60 @@
       color: #1d3f49;
     }
   }
+  .m-photo {
+    .m-photo-1 {
+      width: 1136px;
+      .m-info {
+        background: @color-main;
+        color: #fff;
+        padding: 66px 45px 10px;
+        p {
+          width: 100px;
+          border: 1px solid #fff;
+        }
+        h3 {
+          font-size: @font-size-xl;
+          line-height: @font-size-xl * 3;
+        }
+        div{
+          font-size: @font-size-md;
+          line-height: @font-size-md * 2;
+        }
+      }
+    }
+    .m-photo-slide{
+      .m-slide {
+        @width : 155px;
+        @height : 568px;
+
+        position: relative;
+        margin: 0;
+        padding: 0;
+        height: @height;
+        overflow: hidden;
+        .s {
+          position: relative;
+          width: @width;
+          height: @height;
+          float: left;
+          background: #ededed;
+          overflow: hidden;
+          font-size: 12px;
+          a {
+            text-decoration: none;
+          }
+          .mask {
+            background: url(/public/images/event/mask-01.png) repeat;
+            width: @width;
+            height: @height;
+            position: absolute;
+            top:0;
+          }
+        }
+      }
+    }
+    .m-photo-3 {
+    }
+  }
 }
+
