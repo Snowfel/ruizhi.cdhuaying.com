@@ -1,0 +1,89 @@
+@import 'main.less';
+.container {
+  width: 1170px;
+}
+.g-class-intro {
+  .tab-content {
+    .m-intro {
+      background: #ededed;
+      padding: 20px;
+      h3 {
+        color: #39434b;
+        font-size: @font-size-xl;
+        line-height: @font-size-xl * 1.5;
+      }
+      .u-intro {
+        font-size: @font-size-lg;
+        color: #727171;
+      }
+      .u-age {
+        font-size: 17px;
+        color: #2b2d39;
+      }
+      .u-address {
+        font-size: 17px;
+        color: #2b2d39;
+      }
+      .u-btn {
+        line-height: 36px;
+        a {
+          display: inline-block;
+          padding: 0 32px;
+          font-size: 18px;
+          color: #fff;
+          background: @color-main;
+          border: 2px solid @color-main;
+          border-radius: 40px;
+          &:last-child{
+            background: #ededed;
+            color: @color-main;
+          }
+        }
+      }
+    }
+  }
+}
+
+.g-interaction {
+  h1{
+    font-size: @font-size-xl;
+    line-height: @font-size-xxxl * 1.5;
+    border-bottom: 1px solid #bbbbbd;
+  }
+  .tab-content {
+    background: url("/public/images/class/bg-phone.png") no-repeat;
+
+    padding: 85px 0 147px 225px;
+    .tab-pane {
+      width: 230px;
+      height: 400px;
+      border: 1px solid #b2b2b4;
+      overflow: hidden;
+      .carousel {
+        background: #3e4d7f;
+      }
+    }
+  }
+  .nav-pills {
+    .nav-link {
+      &>div {
+        background: url(/public/images/class/bg-02.png) no-repeat 6px 10px;
+        .u-intro {
+          color: @color-gray-dark;
+          font-size: @font-size-md;
+        }
+      }
+      &.active {
+        background: url(/public/images/class/bg-01.png) no-repeat;
+        &>div {
+          background: url(/public/images/class/bg-03.png) no-repeat 6px 10px;
+          .u-intro {
+            color: #fff;
+          }
+        }
+      }
+    }
+
+  }
+}
+
