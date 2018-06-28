@@ -40,16 +40,23 @@
           }
         }
       }
+      &:hover {
+        border: 1px solid @color-main;
+        background: #FFF;
+        padding: 19px;
+        .u-btn {
+          a {
+            &:last-child{
+              background: #fff;
+            }
+          }
+        }
+      }
     }
   }
 }
 
 .g-interaction {
-  h1{
-    font-size: @font-size-xl;
-    line-height: @font-size-xxxl * 1.5;
-    border-bottom: 1px solid #bbbbbd;
-  }
   .tab-content {
     background: url("/public/images/class/bg-phone.png") no-repeat;
 
