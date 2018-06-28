@@ -10,7 +10,7 @@
                     <xsl:attribute name="class">carousel-inner</xsl:attribute>
                     <xsl:for-each select="NewDataSet/Table">
                         <div>
-                            <xsl:attribute name="class">carousel-item<xsl:if test="position() = 1">active</xsl:if></xsl:attribute>
+                            <xsl:attribute name="class">carousel-item<xsl:if test="position() = 1"> active</xsl:if></xsl:attribute>
                             <xsl:attribute name="style">background:url(<xsl:value-of select="pe:UpLoadDir()"/><xsl:value-of select="DefaultPicUrl"/>)<xsl:value-of select="bgColor"/> center 0 no-repeat;</xsl:attribute>
                             <a>
                                 <xsl:attribute name="href"><xsl:value-of select="RedirectLink"/></xsl:attribute>
@@ -33,7 +33,7 @@
                         <xsl:for-each select="NewDataSet/Table">
                             <li>
                                 <xsl:attribute name="data-target">#<xsl:value-of select="$TagID"/></xsl:attribute>
-                                <xsl:attribute name="data-slide-to">0</xsl:attribute>
+                                <xsl:attribute name="data-slide-to"><xsl:value-of select="position() - 1"/></xsl:attribute>
                                 <xsl:if test="position() = 1">
                                     <xsl:attribute name="class">active</xsl:attribute>
                                 </xsl:if>

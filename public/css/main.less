@@ -35,7 +35,6 @@ a {
   }
 }
 
-
 .u-text-sm {
   font-size: @font-size-sm;
 }
@@ -195,14 +194,15 @@ h5 {
 }
 
 .g-top-slide {
-  height: 400px;
+  @tag-height: 400px;
+  height: @tag-height;
   .carousel-inner {
     .carousel-item{
-      height: 400px;
+      height: @tag-height;
       a {
         display: block;
         width: 100%;
-        height: 400px;
+        height: @tag-height;
       }
     }
   }
