@@ -68,6 +68,44 @@ h1 {
     line-height: @font-size-xxxl * 2;
     text-indent: 8px;
   }
+  &.m-block-title-more {
+    border-bottom: 1px solid @color-main;
+    .u-title{
+      width: 160px;
+      line-height: 50px;
+      background: @color-main;
+      font-size: @font-size-xxxl;
+      color: #FFF;
+      text-align: center;
+    }
+    .u-more{
+      font-size: @font-size-xxl;
+      .u-title-en{
+        display: inline-block;
+        line-height: 48px;
+      }
+      a.u-btn{
+        display: inline-block;
+        float: right;
+        border:1px solid @color-main;
+        border-radius: 40px;
+        padding: 0 20px;
+        color: @color-main;
+        &:hover{
+          text-decoration: none;
+        }
+        span {
+          display: inline-block;
+          line-height: 40px;
+          vertical-align: middle;
+          &.u-plus{
+            font-size: 32px;
+            line-height: 40px;
+          }
+        }
+      }
+    }
+  }
   &.u-num {
     line-height: 92px;
     color: @color-green-light;
