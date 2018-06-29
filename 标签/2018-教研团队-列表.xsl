@@ -14,9 +14,7 @@
             <xsl:otherwise>
                 {PE.DataSource id="InfoList" datasource="2018-教研团队-循环分页" nodeid="<xsl:value-of select="$nodeid"/>"  urlpage="true" page="true"  pagesize="<xsl:value-of select="$outputQty"/>"  titleLength="<xsl:value-of select="$titleLength"/>" linkOpenType="<xsl:value-of select="$linkOpenType"/>" xslt="true" /}
                 {PE.Repeat id="InfoList" loop="1000"}
-                <li>
-                    {PE.field id="InfoList" fieldname="InfoPath" /}
-                </li>
+                {PE.field id="InfoList" fieldname="InfoPath" /}
                 {/PE.Repeat}
             </xsl:otherwise>
         </xsl:choose>

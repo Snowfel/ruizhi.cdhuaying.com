@@ -31,13 +31,15 @@
                         <xsl:value-of select="Intro" />
                     </Intro>
                     <InfoPath>
-                        &lt;a href="<xsl:value-of disable-output-escaping="yes" select="pe:GetInfoPath(NodeID,GeneralID,InputTime,PinyinTitle,HtmlPageName)"/>" title="<xsl:value-of select="Teacher_EnName"/>" target="_blank" &gt;
-                        &lt;img src="<xsl:value-of select="pe:UpLoadDir()"/>
-                        <xsl:value-of select="DefaultPicUrl"/>" alt="<xsl:value-of select="Teacher_EnName"/>" border="0" /&gt;
-                        &lt;/a&gt;
-                        &lt;a href="<xsl:value-of disable-output-escaping="yes" select="pe:GetInfoPath(NodeID,GeneralID,InputTime,PinyinTitle,HtmlPageName)"/>" target="_blank" class="teaname" &gt;&lt;span&gt;<xsl:value-of select="Teacher_EnName" />&lt;/span&gt;&lt;/a&gt;
-                        &lt;br /&gt;
-                        &lt;a href="<xsl:value-of disable-output-escaping="yes" select="pe:GetInfoPath(NodeID,GeneralID,InputTime,PinyinTitle,HtmlPageName)"/>" target="_blank" class="teaintro" &gt;&lt;span&gt;教学专长：<xsl:value-of select="Intro" />&lt;/span&gt;&lt;/a&gt;
+                        &lt;div class="col u-content" style="background-image: url(<xsl:value-of select="pe:UpLoadDir()"/><xsl:value-of select="DefaultPicUrl"/>); background-size:100%;"&gt;
+                        &lt;div class="u-info"&gt;
+                        &lt;div class="u-name"&gt;<xsl:value-of select="Title" />&lt;/div&gt;
+                        &lt;div class="u-title"&gt;<xsl:value-of select="teacherTitle" />&lt;/div&gt;
+                        &lt;div class="u-edu"&gt;<xsl:value-of select="education" />&lt;/div&gt;
+                        &lt;div class="u-intro pt-5"&gt;<xsl:value-of select="pe:RemoveHtml(intro)" />&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;a class="u-btn pos_a" data-pk="<xsl:value-of select="GeneralID" />" type="button" data-toggle="modal" data-target=".bd-example-modal-lg" style="cursor: pointer;"&gt; +&lt;/a&gt;
+                        &lt;/div&gt;
                     </InfoPath>
                     <Teacherlist>
                         &lt;a href="<xsl:value-of disable-output-escaping="yes" select="pe:GetInfoPath(NodeID,GeneralID,InputTime,PinyinTitle,HtmlPageName)"/>" title="<xsl:value-of select="Teacher_EnName"/>" target="_blank" &gt;
