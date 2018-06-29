@@ -27,11 +27,18 @@
                     </xsl:otherwise>
                 </xsl:choose>
             </TitleIntact>
+            <DefaultPicUrl>
+                &lt;img src="<xsl:value-of select="pe:UpLoadDir()"/>
+                <xsl:value-of select="/NewDataSet/Table/DefaultPicUrl"/>" alt="<xsl:value-of select="/NewDataSet/Table/Title"/>" border="0" /&gt;
+            </DefaultPicUrl>
+            <classhour>
+                <xsl:value-of select="/NewDataSet/Table/classhour"/>
+            </classhour>
             <age>
                 <xsl:value-of select="/NewDataSet/Table/age"/>
             </age>
             <feature>
-                <xsl:value-of select="pe:RemoveHtml(/NewDataSet/Table/age)"/>
+                <xsl:value-of select="pe:RemoveHtml(/NewDataSet/Table/feature)"/>
             </feature>
             <content>
                 <xsl:value-of select="pe:RemoveHtml(/NewDataSet/Table/content)"/>

@@ -31,7 +31,7 @@
                         <xsl:value-of select="Intro" />
                     </Intro>
                     <InfoPath>
-                        &lt;div class="row m-intro mb-3"&gt;
+                        &lt;div class="row m-intro m-intro-list mb-3 mx-0"&gt;
                         &lt;div class="col-6"&gt;
                         &lt;img src="<xsl:value-of select="pe:UpLoadDir()"/><xsl:value-of select="DefaultPicUrl"/>"&gt;
                         &lt;/div&gt;
