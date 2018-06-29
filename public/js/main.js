@@ -1,3 +1,6 @@
+
+
+
 $(function(){
     $(".g-teacher-recommend .u-content").each(function(i){
         $(this).hover(function(){
