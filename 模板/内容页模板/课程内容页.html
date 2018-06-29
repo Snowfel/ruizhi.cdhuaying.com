@@ -18,13 +18,18 @@
 
 {pe.label id="2018-全局-顶部BANNER" /}
 
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item"><a href="#">Library</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Data</li>
-  </ol>
-</nav>
+<div class="g-breadcrumb">
+  <nav aria-label="breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb">
+        <li class="">当前位置：</li>
+        <li class="breadcrumb-item"><a href="{PE.SiteConfig.sitepath/}">首页</a></li>
+        {PE.Label id="当前位置导航" nodeId="{PE.Field id="cone" fieldname="NodeID" /}" /}
+        <li class="breadcrumb-item active" aria-current="page">{PE.Field id="cone" fieldname="Title" /}</li>
+      </ol>
+    </div>
+  </nav>
+</div>
 
 <div class="g-class-intro">
   <div class="container">
