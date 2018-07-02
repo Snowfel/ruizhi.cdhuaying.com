@@ -13,7 +13,10 @@
             <xsl:when test="count(Table) = 0">
             </xsl:when>
             <xsl:otherwise>
-                <div id="index-top-banner" class="carousel slide" data-ride="carousel">
+                <div>
+                    <xsl:attribute name="id"><xsl:value-of select="$tagid"/></xsl:attribute>
+                    <xsl:attribute name="class">carousel slide</xsl:attribute>
+                    <xsl:attribute name="data-ride">carousel</xsl:attribute>
                     {PE.Label id="2018-热门活动-切换数据源" outputQty="10" NodeID="<xsl:value-of select="$nodeid"/>" TagID="<xsl:value-of select="$tagid"/>" /}
                 </div>
             </xsl:otherwise>
