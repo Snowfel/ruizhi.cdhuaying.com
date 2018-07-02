@@ -6,73 +6,35 @@
     <xsl:template match="/">
         <xsl:choose>
             <xsl:when test="NewDataSet/Table">
-                <div>
-                    <xsl:attribute name="class">carousel-inner</xsl:attribute>
-                    <xsl:for-each select="NewDataSet/Table">
+                <xsl:for-each select="NewDataSet/Table">
+                    <div>
+                        <xsl:attribute name="class">col u-content</xsl:attribute>
                         <div>
-                            <xsl:attribute name="class">carousel-item<xsl:if test="position() = 1"> active</xsl:if></xsl:attribute>
-                            <xsl:attribute name="style">background:url(<xsl:value-of select="pe:UpLoadDir()"/><xsl:value-of select="DefaultPicUrl"/>)<xsl:value-of select="bgColor"/> center 0 no-repeat;</xsl:attribute>
-                            <a>
-                                <xsl:attribute name="href"><xsl:value-of select="RedirectLink"/></xsl:attribute>
-                                <xsl:attribute name="target">_blank</xsl:attribute>
-                            </a>
+                            <xsl:attribute name="class">u-img</xsl:attribute>
+                            <xsl:attribute name="style">background: url(<xsl:value-of select="pe:UpLoadDir()"/><xsl:value-of select="DefaultPicUrl"/>) #0a7fa4 center 0 no-repeat;</xsl:attribute>
                         </div>
-                    </xsl:for-each>
-                </div>
+                        <div>
+                            <xsl:attribute name="class">u-info</xsl:attribute>
+                            <div>
+                                <xsl:attribute name="class">u-title</xsl:attribute>
+                                <a>
+                                    <xsl:attribute name="href"><xsl:value-of select="RedirectLink"/></xsl:attribute>
+                                    <xsl:value-of select="Title"/>
+                                </a>
+                            </div>
+                            <div>
+                                <xsl:attribute name="class">u-intro</xsl:attribute>
+                                <a>
+                                    <xsl:attribute name="href"><xsl:value-of select="RedirectLink"/></xsl:attribute>
+                                    <xsl:value-of select="intro"/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </xsl:for-each>
             </xsl:when>
             <xsl:otherwise>
             </xsl:otherwise>
         </xsl:choose>
-
-        <div class="container">
-            <xsl:attribute name="class">container</xsl:attribute>
-            <xsl:choose>
-                <xsl:when test="NewDataSet/Table">
-                    <ol>
-                        <xsl:attribute name="class">carousel-indicators</xsl:attribute>
-                        <xsl:for-each select="NewDataSet/Table">
-                            <li>
-                                <xsl:attribute name="data-target">#<xsl:value-of select="$TagID"/></xsl:attribute>
-                                <xsl:attribute name="data-slide-to"><xsl:value-of select="position() - 1"/></xsl:attribute>
-                                <xsl:if test="position() = 1">
-                                    <xsl:attribute name="class">active</xsl:attribute>
-                                </xsl:if>
-                            </li>
-                        </xsl:for-each>
-                    </ol>
-                </xsl:when>
-                <xsl:otherwise>
-                </xsl:otherwise>
-            </xsl:choose>
-
-            <a>
-                <xsl:attribute name="class">carousel-control-prev</xsl:attribute>
-                <xsl:attribute name="href">#<xsl:value-of select="$TagID"/></xsl:attribute>
-                <xsl:attribute name="role">button</xsl:attribute>
-                <xsl:attribute name="data-slide">prev</xsl:attribute>
-                <span>
-                    <xsl:attribute name="class">carousel-control-prev-icon</xsl:attribute>
-                    <xsl:attribute name="aria-hidden">true</xsl:attribute>
-                </span>
-                <span>
-                    <xsl:attribute name="class">sr-only</xsl:attribute>
-                    Previous
-                </span>
-            </a>
-            <a>
-                <xsl:attribute name="class">carousel-control-next</xsl:attribute>
-                <xsl:attribute name="href">#<xsl:value-of select="$TagID"/></xsl:attribute>
-                <xsl:attribute name="role">button</xsl:attribute>
-                <xsl:attribute name="data-slide">next</xsl:attribute>
-                <span>
-                    <xsl:attribute name="class">carousel-control-next-icon</xsl:attribute>
-                    <xsl:attribute name="aria-hidden">true</xsl:attribute>
-                </span>
-                <span>
-                    <xsl:attribute name="class">sr-only</xsl:attribute>
-                    Next
-                </span>
-            </a>
-        </div>
     </xsl:template>
 </xsl:stylesheet>
