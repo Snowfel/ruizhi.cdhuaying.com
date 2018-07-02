@@ -1,39 +1,42 @@
 @import 'main.less';
 
-.g-index-content{
+.g-index-content {
   padding: 50px 0 0 0;
-  &.bg-eee{
+  &.bg-eee {
     background: #eee;
     .nav-pills li a.nav-link.active {
       background-color: #eee;
     }
   }
-  .m-content{
-    .u-content{
-      background: #FFF;
-      padding: 0;
-      margin: 0 10px;
-      .u-img{
-
+  .u-content {
+    background: #FFF;
+    padding: 0;
+    margin: 0 10px;
+    .u-img {
+      width: 410px;
+      height: 231px;
+      a {
+        width: 410px;
+        height: 231px;
       }
-      .u-info{
-        padding: 18px;
-        .u-title{
-          font-size: @font-size-xl;
+    }
+    .u-info {
+      padding: 18px;
+      .u-title {
+        font-size: @font-size-xl;
+        color: #39434b;
+        a {
           color: #39434b;
-          a{
-            color: #39434b;
-          }
         }
-        .u-intro{
-          font-size: @font-size-md;
-          color: #727171;
-          a{
-            color: #727171;
-          }
-        }
-
       }
+      .u-intro {
+        font-size: @font-size-md;
+        color: #727171;
+        a {
+          color: #727171;
+        }
+      }
+
     }
   }
 }

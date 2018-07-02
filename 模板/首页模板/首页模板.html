@@ -61,26 +61,41 @@
   </div>
 </div>
 
-<div class="px-video-container" id="myvid">
-  <div class="px-video-img-captions-container">
-    <div class="px-video-captions hide" aria-hidden="true"></div>
-    <video width="640" height="360" poster="media/foo.jpg" controls>
-      <source src="/video/event/We_can_fly.mp4" type="video/mp4" />
-      <source src="foo.webm" type="video/webm" />
-      <track kind="captions" label="English captions" src="media/foo.vtt" srclang="en" default />
-      <div>
-        <a href="/video/event/We_can_fly.mp4">
-          <img src="media/foo.jpg" width="640" height="360" alt="download video" />
-        </a>
-      </div>
-    </video>
-  </div>
-  <div class="px-video-controls"></div>
-</div>
-
 {pe.label id="2018-全局-公共底部" /}
 
 {pe.label id="2018-全局-底部JS" /}
+
+<!-- 精彩视频Modal -->
+<div class="modal fade modal-video-show" id="modal-video-show" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">精彩视频</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="px-video-container" id="myvid">
+          <div class="px-video-img-captions-container">
+            <div class="px-video-captions hide" aria-hidden="true"></div>
+            <video width="640" height="360" poster="media/foo.jpg" controls>
+              <source src="/video/event/We_can_fly.mp4" type="video/mp4" />
+              <source src="foo.webm" type="video/webm" />
+              <track kind="captions" label="English captions" src="media/foo.vtt" srclang="en" default />
+              <div>
+                <a href="/video/event/We_can_fly.mp4">
+                  <img src="media/foo.jpg" width="640" height="360" alt="download video" />
+                </a>
+              </div>
+            </video>
+          </div>
+          <div class="px-video-controls"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script type="text/javascript">
     $(".nav-name-index").addClass("active");
