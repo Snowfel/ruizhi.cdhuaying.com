@@ -293,11 +293,11 @@ function InitPxVideo(options) {
 		'</div>';
 
 	// Adjust layout per width of video - container
-	obj.movieWidth = obj.movie.width;
+	//obj.movieWidth = obj.movie.width;
 	//if (obj.movieWidth < 360) {
 	//	obj.movieWidth = 360;
 	//}
-	obj.container.setAttribute("style", "width:" + obj.movieWidth + "px");
+	//obj.container.setAttribute("style", "width:" + obj.movieWidth + "px");
 
 	// Added for fullscreen reference
 	obj.movieHeight = obj.movie.height;
