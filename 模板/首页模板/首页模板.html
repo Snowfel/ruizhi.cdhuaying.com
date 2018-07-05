@@ -77,8 +77,6 @@
             <div class="px-video-captions hide" aria-hidden="true"></div>
             <video width="100%" poster="media/foo.jpg" controls>
               <source src="/video/event/We_can_fly.mp4" type="video/mp4" id="u-video-source"/>
-              <source src="foo.webm" type="video/webm"/>
-              <track kind="captions" label="English captions" src="media/foo.vtt" srclang="en" default/>
               <div>
                 <a href="/video/event/We_can_fly.mp4" id="u-video-source-a">
                   <img src="media/foo.jpg" width="640" height="360" alt="download video"/>
@@ -107,11 +105,11 @@
     $(function ($) {
         $('.u-btn-show-video-modal').click(function () {
             $('.modal-video-show .modal-title').html($(this).attr('data-title'));
-            $('.modal-video-show .u-video-source').attr('src').val($(this).attr('data-url'));
-            $('.modal-video-show .u-video-source-a').attr('href').val($(this).attr('data-url'));
+            $('#u-video-source').attr('src', $(this).attr('data-url'));
+            $('#u-video-source-a').attr('href', $(this).attr('data-url'));
         });
         $('.modal-video-show').on('shown.bs.modal', function () {
-            alert($('#myvid').html());
+            console.debug($('#myvid').html());
             // Initialize
             new InitPxVideo({
                 "videoId": "myvid"
