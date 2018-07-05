@@ -5,7 +5,7 @@
   {pe.label id="2018-全局-cssjs-上部分" /}
   <link rel="stylesheet/less" href="/public/css/index.less">
   {pe.label id="2018-全局-cssjs-下部分" /}
-  <link rel="stylesheet" href="/public/css/px-video1111111.css"/>
+  <link rel="stylesheet" href="/public/css/px-video.css"/>
 </head>
 <body>
 
@@ -74,17 +74,17 @@
       <div class="modal-body">
         <div class="px-video-container" id="myvid">
           <div class="px-video-img-captions-container">
-            <!--<div class="px-video-captions hide" aria-hidden="true"></div>
+            <div class="px-video-captions hide" aria-hidden="true"></div>
             <video width="100%" poster="media/foo.jpg" controls>
-              <source src="/video/event/We_can_fly.mp4" type="video/mp4"/>
+              <source src="/video/event/We_can_fly.mp4" type="video/mp4" id="u-video-source"/>
               <source src="foo.webm" type="video/webm"/>
               <track kind="captions" label="English captions" src="media/foo.vtt" srclang="en" default/>
               <div>
-                <a href="/video/event/We_can_fly.mp4">
+                <a href="/video/event/We_can_fly.mp4" id="u-video-source-a">
                   <img src="media/foo.jpg" width="640" height="360" alt="download video"/>
                 </a>
               </div>
-            </video>-->
+            </video>
           </div>
           <div class="px-video-controls"></div>
         </div>
@@ -107,6 +107,8 @@
     $(function ($) {
         $('.u-btn-show-video-modal').click(function () {
             $('.modal-video-show .modal-title').html($(this).attr('data-title'));
+            $('.modal-video-show .u-video-source').attr('src').val($(this).attr('data-url'));
+            $('.modal-video-show .u-video-source-a').attr('href').val($(this).attr('data-url'));
         });
         $('.modal-video-show').on('shown.bs.modal', function () {
             alert($('#myvid').html());
