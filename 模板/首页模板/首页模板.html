@@ -5,7 +5,7 @@
   {pe.label id="2018-全局-cssjs-上部分" /}
   <link rel="stylesheet/less" href="/public/css/index.less">
   {pe.label id="2018-全局-cssjs-下部分" /}
-  <link rel="stylesheet" href="/css/px-video.css"/>
+  <link rel="stylesheet" href="/public/css/px-video1111111.css"/>
 </head>
 <body>
 
@@ -74,7 +74,7 @@
       <div class="modal-body">
         <div class="px-video-container" id="myvid">
           <div class="px-video-img-captions-container">
-            <div class="px-video-captions hide" aria-hidden="true"></div>
+            <!--<div class="px-video-captions hide" aria-hidden="true"></div>
             <video width="100%" poster="media/foo.jpg" controls>
               <source src="/video/event/We_can_fly.mp4" type="video/mp4"/>
               <source src="foo.webm" type="video/webm"/>
@@ -84,7 +84,7 @@
                   <img src="media/foo.jpg" width="640" height="360" alt="download video"/>
                 </a>
               </div>
-            </video>
+            </video>-->
           </div>
           <div class="px-video-controls"></div>
         </div>
@@ -109,6 +109,11 @@
             $('.modal-video-show .modal-title').html($(this).attr('data-title'));
         });
         $('.modal-video-show').on('shown.bs.modal', function () {
+            alert($('#myvid').html());
+            // Initialize
+            new InitPxVideo({
+                "videoId": "myvid"
+            });
         }).on('hide.bs.modal', function () {
             $('.modal-video-show .modal-title').html();
         });
