@@ -5,6 +5,7 @@
   {pe.label id="2018-全局-cssjs-上部分" /}
   <link rel="stylesheet/less" href="/public/css/event.less">
   {pe.label id="2018-全局-cssjs-下部分" /}
+  <link rel="stylesheet" href="/public/css/px-video.css"/>
 </head>
 <body>
 
@@ -30,7 +31,7 @@
     <div class="tab-content">
       <div class="tab-pane fade show active" id="m-event-hot" role="tabpanel" aria-labelledby="m-event-hot">
         <div class="row mb-4">
-          {PE.Label id="2018-热门活动-列表" dataid="m-event-hot" nodeid="12" titleLength="31"  linkOpenType="1" outputQty="9" isnew="1" /}
+          {PE.Label id="2018-热门活动-列表" dataid="m-event-hot" nodeid="12" titleLength="31" linkOpenType="1" outputQty="9" isnew="1" /}
         </div>
         <div class="botpage">
           {PE.Page id="url_动易后台风格_色块" datasource="InfoList_m-event-hot" unitname="场活动" /}
@@ -58,7 +59,7 @@
       <div class="tab-pane fade" id="m-event-last" role="tabpanel" aria-labelledby="m-event-last">
 
         <div class="row">
-          {PE.Label id="2018-热门活动-列表" dataid="m-event-last" nodeid="12" titleLength="31"  linkOpenType="1" outputQty="9" isnew="0" /}
+          {PE.Label id="2018-热门活动-列表" dataid="m-event-last" nodeid="12" titleLength="31" linkOpenType="1" outputQty="9" isnew="0" /}
         </div>
         {PE.Page id="url_动易后台风格_色块_外语" datasource="InfoList_m-event-last" unitname="场活动" /}
       </div>
@@ -86,9 +87,13 @@
         <div class="m-video mx-3 pb-4">
           <div class="row">
             <div class="col-sm-6 px-0">
-                <div class="u-img" style="background: url(/public/images/event/img-09.png) center 0 no-repeat; height: 418px;">
-                  <a data-url="/video/study/student_class_show.mp4" data-title="学员课堂展示视频" data-target=".modal-video-show" data-toggle="modal" style="cursor: pointer;" class="u-btn-show-video-modal d-block"></a>
-                </div>
+              <!--<div class="u-img" style="background: url(/public/images/event/img-09.png) center 0 no-repeat; height: 418px;">
+                <a data-url="/video/study/student_class_show.mp4" data-title="学员课堂展示视频" data-target=".modal-video-show" data-toggle="modal" style="cursor: pointer;"
+                   class="u-btn-show-video-modal d-block"></a>
+              </div>-->
+              <div class="u-video" style="background: url(/public/images/event/img-09.png) center 0 no-repeat; height: 418px;">
+              {pe.label id="2018-精彩视频-列表" nodeid="24" dataid="m-video-hot" outputQty="1" /}
+              </div>
             </div>
             <div class="col-sm-6 m-content pt-5">
               <h3 class="px-3">《鹰井之畔》— 节选</h3>
@@ -191,14 +196,15 @@
               <div class="m-info h-100 card-img">
                 <p></p>
                 <h3>演职人员名单</h3>
-                <div>原       著：威廉·巴特勒·叶芝<br>
-                  导       演：叶长海 （上海戏剧学院外国戏剧研究博士）<br>
-                  编       剧：叶长海<br>
+                <div>原 著：威廉·巴特勒·叶芝<br>
+                  导 演：叶长海 （上海戏剧学院外国戏剧研究博士）<br>
+                  编 剧：叶长海<br>
                   剧本翻译：张亚龙<br>
                   服装设计：苏静（四川音乐学院）<br>
                   舞台设计：张劲（西南民族大学艺术学院）<br>
                   特别鸣谢：四川人民艺术剧院黑螺艺术空间<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;成都华樱出国服务股份有限公司</div>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;成都华樱出国服务股份有限公司
+                </div>
               </div>
             </div>
             <div>
@@ -231,18 +237,23 @@
   </div>
 </div>
 
+{pe.label id="2018-精彩视频-modal" /}
+
 {pe.label id="2018-全局-公共底部" /}
+
+<script src="/public/js/strings.js"></script>
+<script src="/public/js/px-video.js"></script>
 
 {pe.label id="2018-全局-底部JS" /}
 
 <script type="text/javascript">
     $(".nav-name-event").addClass("active");
 
-    $('.m-photo-slide .s:first').animate({ width: '643px'}, "fast");
-    $('.m-photo-slide .s').mouseenter(function(j) {
+    $('.m-photo-slide .s:first').animate({width: '643px'}, "fast");
+    $('.m-photo-slide .s').mouseenter(function (j) {
         $('.m-photo-slide .s .mask').addClass('d-block');
         $(this).children('.mask').removeClass('d-block').addClass('d-none');
-        $(this).stop(true,true).animate({ width: '643px' },'2000').siblings().stop(true,true).animate({ width: '248px' },'2000');
+        $(this).stop(true, true).animate({width: '643px'}, '2000').siblings().stop(true, true).animate({width: '248px'}, '2000');
     });
 </script>
 </body>
