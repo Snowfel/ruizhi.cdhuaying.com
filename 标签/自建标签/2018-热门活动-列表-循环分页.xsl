@@ -6,6 +6,7 @@
     <xsl:param name="hits" />
     <xsl:param name="linkOpenType" />
     <xsl:param name="nodeid" />
+    <xsl:param name="isnew" />
     <xsl:output method="html" />
     <xsl:template match="/">
         <NewDataSet>
@@ -36,15 +37,12 @@
                         &lt;div class="card-body"&gt;
                         &lt;img class="card-img-top" src="<xsl:value-of select="pe:UpLoadDir()"/><xsl:value-of select="DefaultPicUrl"/>" alt="<xsl:value-of select="Title" />"&gt;
                         &lt;h3 class="card-title"&gt;<xsl:value-of select="Title" />&lt;/h3&gt;
-                        &lt;p class="card-text"&gt;<xsl:value-of select="pe:CutText(pe:RemoveHtml(Title),$titleLength,'…')" />&lt;/p&gt;
-                        &lt;a href="<xsl:value-of select="RedirectLink" />" class="btn btn-primary float-right d-inline-block px-4"&gt;了解详情&lt;/a&gt;
+                        &lt;p class="card-text"&gt;<xsl:value-of select="pe:CutText(pe:RemoveHtml(intro),$titleLength,'…')" />&lt;/p&gt;
+                        &lt;a href="<xsl:value-of select="RedirectLink" />" target="_blank" class="btn btn-primary float-right d-inline-block px-4"&gt;了解详情&lt;/a&gt;
                         &lt;/div&gt;
                         &lt;/div&gt;
                         &lt;/div&gt;
                     </InfoPath>
-
-
-
                 </Table>
             </xsl:for-each>
         </NewDataSet>
