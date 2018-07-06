@@ -93,35 +93,15 @@
 
 {pe.label id="2018-全局-公共底部" /}
 
+<script src="/public/js/strings.js"></script>
+<script src="/public/js/px-video.js"></script>
+
 {pe.label id="2018-全局-底部JS" /}
 
 <script type="text/javascript">
     $(".nav-name-index").addClass("active");
 </script>
 
-<script src="/public/js/strings.js"></script>
-<script src="/public/js/px-video.js"></script>
-<script>
-    $(function ($) {
-        $('.u-btn-show-video-modal').click(function () {
-            $('.modal-video-show .modal-title').html($(this).attr('data-title'));
-            $('#u-video-source').prop('src', $(this).attr('data-url'));
-            $('#u-video-source-a').prop('href', $(this).attr('data-url'));
-
-            videoSrc =  $(this).attr('data-url');//新的视频播放地址
-            document.getElementById("m-video").src = videoSrc;
-            //document.getElementById("m-video").play();
-        });
-        $('.modal-video-show').on('shown.bs.modal', function () {
-            new InitPxVideo({
-                "videoId": "myvid"
-            });
-        }).on('hide.bs.modal', function () {
-            $('.modal-video-show .modal-title').html();
-            document.getElementById("m-video").src = '';
-        });
-    });
-</script>
 
 </body>
 </html>
