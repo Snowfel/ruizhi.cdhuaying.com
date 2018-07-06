@@ -75,7 +75,7 @@
         <div class="px-video-container" id="myvid">
           <div class="px-video-img-captions-container">
             <div class="px-video-captions hide" aria-hidden="true"></div>
-            <video width="100%" poster="media/foo.jpg" controls>
+            <video id="m-video" width="100%" poster="media/foo.jpg" controls>
               <source src="/video/event/We_can_fly.mp4" type="video/mp4" id="u-video-source"/>
               <div>
                 <a href="/video/event/We_can_fly.mp4" id="u-video-source-a">
@@ -105,17 +105,20 @@
     $(function ($) {
         $('.u-btn-show-video-modal').click(function () {
             $('.modal-video-show .modal-title').html($(this).attr('data-title'));
-            $('#u-video-source').attr('src', $(this).attr('data-url'));
-            $('#u-video-source-a').attr('href', $(this).attr('data-url'));
+            $('#u-video-source').prop('src', $(this).attr('data-url'));
+            $('#u-video-source-a').prop('href', $(this).attr('data-url'));
+
+            videoSrc =  $(this).attr('data-url');//新的视频播放地址
+            document.getElementById("m-video").src = videoSrc;
+            //document.getElementById("m-video").play();
         });
         $('.modal-video-show').on('shown.bs.modal', function () {
-            console.debug($('#myvid').html());
-            // Initialize
             new InitPxVideo({
                 "videoId": "myvid"
             });
         }).on('hide.bs.modal', function () {
             $('.modal-video-show .modal-title').html();
+            document.getElementById("m-video").src = '';
         });
     });
 </script>
