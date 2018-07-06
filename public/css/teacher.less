@@ -2,9 +2,6 @@
 
 .g-content-video {
   background: #eeeeee;
-  .container{
-    width: 1170px;
-  }
   .m-content{
     background: #fff;
     color: #39434b;
@@ -24,90 +21,50 @@
 }
 
 /*风琴样式表*/
-.g-teacher-box {
-  overflow: hidden;
-  .m-box {
+.m-photo-slide{
+  .m-slide {
+    @width : 219px;
+    @height : 490px;
+
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: @height;
     overflow: hidden;
-    ul {
+    .s {
       position: relative;
-      height: 490px;
-      margin: 0;
-      padding: 0;
+      width: @width;
+      height: @height;
+      float: left;
       background: #ededed;
       overflow: hidden;
-      width: 1000px;
-      .s {
-        position: relative;
-        width: 366px;
+      font-size: 12px;
+      a {
+        text-decoration: none;
+      }
+      .mask {
+        background: url(/public/images/event/mask-01.png) repeat;
+        width: @width;
+        height: @height;
+        position: absolute;
+        top:0;
+      }
+      .m-info {
+        position: absolute;
+        width: 585px;
         height: 490px;
-        float: left;
-        background: #ededed;
-        overflow: hidden;
+        margin: 0 0 0 366px;
+        color: @color-white;
+        background: @color-main;
+        p {
+          width: 100px;
+          border: 1px solid #fff;
+        }
         h3 {
-          position: absolute;
-          top: 0;
-          left: 0;
-          margin: 0;
-          width: 366px;
-          height: 490px;
-          background-color: #000000;
-          position: relative;
-          cursor: pointer;
-          h3.on img {
-            filter: alpha(opacity=100);
-            opacity: 1;
-          }
-        }
 
-        .mask {
-          background: url(/images/newsite/maskbg.png) repeat;
-          width: 366px;
-          height: 490px;
-          position: absolute;
-          top: 0;
-          .country {
-            font-size: 18px;
-            color: #fff;
-            line-height: 1.6em;
-            width: 99px;
-            text-align: center;
-            margin: 85px 0 0 11px;
-          }
         }
-        .m-text {
-          width: 365px;
-          height: 190px;
-          position: absolute;
-          margin: -197px 0 0 255px;
-          ul {
-            li {
-              float: left;
-              font-size: 12px;
-              margin: 20px 0 0 20px;
-              a {
-                text-decoration: none;
-              }
-            }
-          }
-          .earea {
-            font-size: 8px;
-            -webkit-transform: scale(0.6, 0.6);
-            color: #888888;
-            padding-left: 10px;
-          }
-          .btn-j {
-            display: inline-block;
-            margin: 10px 0 0px 62px;
-            width: 47px;
-            height: 28px;
-            text-align: center;
-            line-height: 28px;
-            background: #79d51a;
-            font-size: 12px;
-            a {
-              color: #fff;
-            }
-          }
+        div {
+          font-size: @font-size-md;
         }
       }
     }

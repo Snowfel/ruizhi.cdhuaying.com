@@ -7,6 +7,7 @@
     <xsl:param name="eliteLevel" />
     <xsl:param name="nodeid" />
     <xsl:param name="tagid" />
+    <xsl:param name="isnew" />
     <xsl:output method="html" />
     <xsl:template match="/NewDataSet">
         <xsl:choose>
@@ -17,7 +18,7 @@
                     <xsl:attribute name="id"><xsl:value-of select="$tagid"/></xsl:attribute>
                     <xsl:attribute name="class">carousel slide</xsl:attribute>
                     <xsl:attribute name="data-ride">carousel</xsl:attribute>
-                    {PE.Label id="2018-热门活动-切换数据源" outputQty="10" NodeID="<xsl:value-of select="$nodeid"/>" TagID="<xsl:value-of select="$tagid"/>" /}
+                    {PE.Label id="2018-热门活动-切换数据源" outputQty="10" NodeID="<xsl:value-of select="$nodeid"/>" TagID="<xsl:value-of select="$tagid"/>" isnew="<xsl:value-of select="$isnew"/>" /}
                 </div>
             </xsl:otherwise>
         </xsl:choose>
