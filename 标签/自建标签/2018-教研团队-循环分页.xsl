@@ -44,7 +44,7 @@
                         data-teachage="<xsl:value-of select="teachage" />"
                         data-education="<xsl:value-of select="education" />"
                         data-intro="<xsl:value-of select="intro" />"
-                        type="button" data-toggle="modal" data-target=".modal-teacher-show" style="cursor: pointer;"&gt; +&lt;/a&gt;
+                        data-toggle="modal" data-target=".modal-teacher-show" style="cursor: pointer;"&gt;&lt;/a&gt;
                         &lt;/div&gt;
                     </InfoPath>
                     <Teacherlist>
