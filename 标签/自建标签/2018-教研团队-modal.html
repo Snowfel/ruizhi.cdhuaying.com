@@ -1,28 +1,42 @@
-<div class="modal fade modal-video-show" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade modal-teacher-show" tabindex="-1" role="dialog" aria-labelledby="u-modal-teacher-show-title" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title" id="exampleModalLabel">教研团队</h4>
+        <h4 class="modal-title" id="u-modal-teacher-show-title">教研团队</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <div class="px-video-container" id="myvid">
-          <div class="px-video-img-captions-container">
-            <div class="px-video-captions hide" aria-hidden="true"></div>
-            <video id="m-video" width="100%" poster="media/foo.jpg" controls>
-              <source src="/video/event/We_can_fly.mp4" type="video/mp4" id="u-video-source"/>
-              <div>
-                <a href="/video/event/We_can_fly.mp4" id="u-video-source-a">
-                  <img src="media/foo.jpg" width="640" height="360" alt="download video"/>
-                </a>
-              </div>
-            </video>
+        <div class="row">
+          <div class="col-4">
+            <div class="u-modal-teacher-show-img"></div>
           </div>
-          <div class="px-video-controls"></div>
+          <div class="col-8">
+            <div class="u-modal-teacher-show-info">
+              <div class="u-modal-teacher-show-name"></div>
+              <div class="u-modal-teacher-show-title"></div>
+              <div class="u-modal-teacher-show-intro"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+<script type="text/javascript">
+    $(function () {
+        //弹窗显示教师信息-开始
+        $('.u-btn-show-teacher-modal').click(function () {
+            $('.modal-teacher-show .u-modal-teacher-show-img').attr('style', 'background:url('+$(this).attr('data-img')+') no-repeat center top; height:800px;');
+            $('.modal-teacher-show .u-modal-teacher-show-name').html($(this).attr('data-name'));
+            $('.modal-teacher-show .u-modal-teacher-show-title').html($(this).attr('data-title'));
+            $('.modal-teacher-show .u-modal-teacher-show-intro').html($(this).attr('data-intro'));
+        });
+        $('.modal-video-show').on('shown.bs.modal', function () {
+        }).on('hide.bs.modal', function () {
+            //$('.modal-teacher-show .m-teacher-info').html('');
+        });
+        //弹窗显示教师信息-结束
+    });
+</script>

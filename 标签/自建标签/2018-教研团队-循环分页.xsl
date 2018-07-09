@@ -38,7 +38,11 @@
                         &lt;div class="u-edu"&gt;<xsl:value-of select="education" />&lt;/div&gt;
                         &lt;div class="u-intro pt-5"&gt;<xsl:value-of select="pe:RemoveHtml(intro)" />&lt;/div&gt;
                         &lt;/div&gt;
-                        &lt;a class="u-btn pos_a" data-pk="<xsl:value-of select="GeneralID" />" type="button" data-toggle="modal" data-target=".bd-example-modal-lg" style="cursor: pointer;"&gt; +&lt;/a&gt;
+                        &lt;a class="u-btn pos_a u-btn-show-teacher-modal" data-pk="<xsl:value-of select="GeneralID" />"
+                        data-img="<xsl:value-of select="pe:UpLoadDir()"/><xsl:value-of select="DefaultPicUrl"/>"
+                        data-name="<xsl:value-of select="Title" />" data-title="<xsl:value-of select="teacherTitle" />"
+                        data-intro="<xsl:value-of select="intro" />"
+                        type="button" data-toggle="modal" data-target=".modal-teacher-show" style="cursor: pointer;"&gt; +&lt;/a&gt;
                         &lt;/div&gt;
                     </InfoPath>
                     <Teacherlist>
