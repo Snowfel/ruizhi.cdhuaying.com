@@ -41,6 +41,8 @@
                         &lt;a class="u-btn pos_a u-btn-show-teacher-modal" data-pk="<xsl:value-of select="GeneralID" />"
                         data-img="<xsl:value-of select="pe:UpLoadDir()"/><xsl:value-of select="DefaultPicUrl"/>"
                         data-name="<xsl:value-of select="Title" />" data-title="<xsl:value-of select="teacherTitle" />"
+                        data-teachage="<xsl:value-of select="teachage" />"
+                        data-education="<xsl:value-of select="education" />"
                         data-intro="<xsl:value-of select="intro" />"
                         type="button" data-toggle="modal" data-target=".modal-teacher-show" style="cursor: pointer;"&gt; +&lt;/a&gt;
                         &lt;/div&gt;
