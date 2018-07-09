@@ -21,26 +21,6 @@ $(function(){
         orderInfoPost(arrOrderInfo);
     });
 
-    //弹窗播放视频-开始
-    $('.u-btn-show-video-modal').click(function () {
-        $('.modal-video-show .modal-title').html($(this).attr('data-title'));
-        $('#u-video-source').prop('src', $(this).attr('data-url'));
-        $('#u-video-source-a').prop('href', $(this).attr('data-url'));
-
-        videoSrc =  $(this).attr('data-url');//新的视频播放地址
-        document.getElementById("m-video").src = videoSrc;
-        //document.getElementById("m-video").play();
-    });
-    $('.modal-video-show').on('shown.bs.modal', function () {
-        new InitPxVideo({
-            "videoId": "myvid"
-        });
-    }).on('hide.bs.modal', function () {
-        $('.modal-video-show .modal-title').html();
-        document.getElementById("m-video").src = '';
-    });
-    //弹窗播放视频-结束
-
 });
 
 
