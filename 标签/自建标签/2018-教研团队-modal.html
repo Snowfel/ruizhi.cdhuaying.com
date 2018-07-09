@@ -28,7 +28,7 @@
     $(function () {
         //弹窗显示教师信息-开始
         $('.u-btn-show-teacher-modal').click(function () {
-            $('.modal-teacher-show .u-modal-teacher-show-img').attr('style', 'background:url('+$(this).attr('data-img')+') no-repeat center top; height:800px;');
+            $('.modal-teacher-show .u-modal-teacher-show-img').attr('style', 'background:url('+$(this).attr('data-img')+') no-repeat center top; background-size: 100%; height:340px;');
             $('.modal-teacher-show .u-modal-teacher-show-name').html($(this).attr('data-name'));
             $('.modal-teacher-show .u-modal-teacher-show-title').html($(this).attr('data-title'));
             $('.modal-teacher-show .u-modal-teacher-show-intro').html($(this).attr('data-intro'));
