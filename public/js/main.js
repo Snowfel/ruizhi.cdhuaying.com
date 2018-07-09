@@ -1,14 +1,16 @@
 $(function(){
+    //教师
     $(".g-teacher-recommend .u-content").each(function(i){
         $(this).hover(function(){
             $(".g-teacher-recommend .u-content .u-info:eq("+i+")").stop().animate({"margin-top":"0"});
             $(".g-teacher-recommend .u-content .u-btn:eq("+i+")").stop().addClass("u-btn-light");
         },function(){
-            $(".g-teacher-recommend .u-content .u-info:eq("+i+")").stop().animate({"margin-top":"430px"});
+            $(".g-teacher-recommend .u-content .u-info:eq("+i+")").stop().animate({"margin-top":"371px"});
             $(".g-teacher-recommend .u-content .u-btn:eq("+i+")").stop().removeClass("u-btn-light");
         });
     });
-    
+
+    //报名信息
     $(".u-btn-order-submit").on('click', function () {
         //$(this).attr('data-rel')
         arrOrderInfo = new Array();
@@ -19,6 +21,7 @@ $(function(){
         orderInfoPost(arrOrderInfo);
     });
 
+    //弹窗播放视频-开始
     $('.u-btn-show-video-modal').click(function () {
         $('.modal-video-show .modal-title').html($(this).attr('data-title'));
         $('#u-video-source').prop('src', $(this).attr('data-url'));
@@ -36,6 +39,7 @@ $(function(){
         $('.modal-video-show .modal-title').html();
         document.getElementById("m-video").src = '';
     });
+    //弹窗播放视频-结束
 
 });
 

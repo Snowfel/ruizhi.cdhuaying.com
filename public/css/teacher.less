@@ -20,10 +20,21 @@
   }
 }
 
+.g-partner {
+  background: #eeeeee;
+  .container {
+    .m-partner {
+      text-align: center;
+      &>div {
+        height: 200px;
+      }
+    }
+  }
+}
 /*风琴样式表*/
 .m-photo-slide{
   .m-slide {
-    @width : 219px;
+    @width : 194px;
     @height : 490px;
 
     position: relative;
@@ -51,7 +62,7 @@
       }
       .m-info {
         position: absolute;
-        width: 585px;
+        width: 560px;
         height: 490px;
         margin: 0 0 0 366px;
         color: @color-white;

@@ -18,7 +18,9 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-6 px-0">
-        <div style="background: #0a7fa4; height: 240px;"></div>
+        <div style="background: #0a7fa4; height: 418px; background: url(/public/images/teacher/video-01.png) no-repeat;">
+          <a data-url="/video/teacher/foreign_teacher_interview1.mp4" data-title="外教采访" data-target=".modal-video-show" data-toggle="modal" style="cursor: pointer; height: 418px;" class="u-btn-show-video-modal d-block"></a>
+        </div>
       </div>
       <div class="col-sm-6 m-content">
         <h1 class="px-3">睿知少儿戏剧英语</h1>
@@ -117,20 +119,21 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-6 px-0">
-        <div style="background: #0a7fa4; height: 240px;"></div>
+        <div style="background: #0a7fa4; height: 418px; background: url(/public/images/teacher/video-02.png) no-repeat;">
+          <a data-url="/video/teacher/foreign_teacher_interview2.mp4" data-title="教师采访" data-target=".modal-video-show" data-toggle="modal" style="cursor: pointer; height: 418px;" class="u-btn-show-video-modal d-block"></a>
+        </div>
       </div>
       <div class="col-sm-6 m-content">
         <h1 class="px-3">睿知少儿戏剧英语</h1>
         <div class="py-3 px-3">提升语言能力，拓展思维的广度和深度提升语言能力，拓展思维的广度和深度</div>
       </div>
-
     </div>
   </div>
 </div>
 
 <div class="g-teacher-recommend">
   <div class="container">
-    <div class="m-content py-5">
+    <div class="m-content pb-5">
       <div class="row">
         {PE.Label id="2018-教研团队-列表" nodeid="11" titleLength="31"  linkOpenType="1" outputQty="4"/}
       </div>
@@ -138,6 +141,20 @@
 
   </div>
 </div>
+
+<div class="g-partner py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col m-partner"><div style="background: url(/public/images/teacher/img-partner-01.png) no-repeat center center;" class="pb-3"></div>纽约电影学院</div>
+      <div class="col m-partner"><div style="background: url(/public/images/teacher/img-partner-02.png) no-repeat center center;" class="pb-3"></div>上海戏剧学院</div>
+      <div class="col m-partner"><div style="background: url(/public/images/teacher/img-partner-03.png) no-repeat center center;" class="pb-3"></div>东华大学</div>
+      <div class="col m-partner"><div style="background: url(/public/images/teacher/img-partner-04.png) no-repeat center center;" class="pb-3"></div>哈佛大学</div>
+      <div class="col m-partner"><div style="background: url(/public/images/teacher/img-partner-05.png) no-repeat center center;" class="pb-3"></div>中国儿童艺术剧院</div>
+    </div>
+  </div>
+</div>
+
+{pe.label id="2018-精彩视频-modal" /}
 
 {pe.label id="2018-全局-公共底部" /}
 
@@ -148,13 +165,20 @@
         $(".nav-name-teacher").addClass("active");
 
         $('.m-photo-slide1 .s:first').animate({width: '921px'}, "fast");
-        $('.m-photo-slide2 .s:first').animate({width: '921px'}, "fast");
-        $('.m-photo-slide .s').mouseenter(function (j) {
-            //$('.m-photo-slide .s .mask').addClass('d-block');
-            //$('.m-photo-slide .s .m-info').addClass('d-none');
-            $(this).children('.mask').removeClass('d-block').addClass('d-none').siblings().children('.mask').removeClass('d-none').addClass('d-block');
-            $(this).children('.m-info').removeClass('d-none').addClass('d-block').siblings().children('.m-info').removeClass('d-block').addClass('d-none');
-            $(this).stop(true, true).animate({width: '921px'}, '2000').siblings().stop(true, true).animate({width: '219px'}, '2000');
+        $('.m-photo-slide2 .s:first').animate({width: '926px'}, "fast");
+        $('.m-photo-slide1 .s').mouseenter(function (j) {
+            $('.m-photo-slide1 .s .mask').addClass('d-block');
+            $('.m-photo-slide1 .s .m-info').addClass('d-none');
+            $(this).children('.mask').removeClass('d-block').addClass('d-none');
+            $(this).children('.m-info').removeClass('d-none').addClass('d-block');
+            $(this).stop(true, true).animate({width: '926px'}, '2000').siblings().stop(true, true).animate({width: '194px'}, '2000');
+        });
+        $('.m-photo-slide2 .s').mouseenter(function (j) {
+            $('.m-photo-slide2 .s .mask').addClass('d-block');
+            $('.m-photo-slide2 .s .m-info').addClass('d-none');
+            $(this).children('.mask').removeClass('d-block').addClass('d-none');
+            $(this).children('.m-info').removeClass('d-none').addClass('d-block');
+            $(this).stop(true, true).animate({width: '926px'}, '2000').siblings().stop(true, true).animate({width: '194px'}, '2000');
         });
     });
 </script>
