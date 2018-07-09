@@ -1,6 +1,12 @@
 @import 'main.less';
 
 .g-event-hot {
+  .row {
+    &>div {
+      padding-right: 8px;
+      padding-left: 8px;
+    }
+  }
   .card {
     border: 0;
     h3 {
@@ -8,7 +14,7 @@
       color: #39434b;
       line-height: 50px;
     }
-    .x {
+    .card-text {
       color: #727171;
     }
     .btn {
@@ -22,11 +28,6 @@
 }
 
 .g-event-report {
-  h1 {
-    font-size: @font-size-xl;
-    line-height: @font-size-xxxl * 1.5;
-    border-bottom: 1px solid #bbbbbd;
-  }
   .m-video {
     .u-video {
       a {
@@ -37,6 +38,10 @@
     .m-content {
       color: @color-gray-dark;
       border-bottom: 9px solid #989898;
+      h3 {
+        color: #2b2d39;
+        font-size: @font-size-xxl;
+      }
       div{
         font-size: @font-size-lg;
       }
@@ -50,8 +55,7 @@
     .u-img {
       width: 194px;
       height: 233px;
-      margin: 0 auto;
-
+      margin: 0 auto 16px;
     }
     .u-title {
       font-size: @font-size-xl;
@@ -77,12 +81,12 @@
           border: 1px solid #fff;
         }
         h3 {
-          font-size: @font-size-xl;
+          font-size: @font-size-xxl;
           line-height: @font-size-xl * 3;
         }
         div{
           font-size: @font-size-md;
-          line-height: @font-size-md * 2;
+          line-height: @font-size-md * 1.8;
         }
       }
     }

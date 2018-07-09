@@ -16,9 +16,7 @@
 
 <div class="g-event-hot">
   <div class="container">
-    <div class="m-title row">
-      <div class="u-title">热门活动</div>
-    </div>
+    <h1 class="m-block-title">热门活动</h1>
     <ul class="nav nav-pills my-3" role="tablist">
       <li class="nav-item">
         <a class="nav-link active" data-toggle="pill" href="#m-event-hot" role="tab" aria-controls="m-event-hot" aria-selected="true">热门活动</a>
@@ -30,7 +28,7 @@
     <div class="tab-content">
       <div class="tab-pane fade show active" id="m-event-hot" role="tabpanel" aria-labelledby="m-event-hot">
         <div class="row mb-4">
-          {PE.Label id="2018-热门活动-列表" dataid="m-event-hot" nodeid="12" titleLength="31" linkOpenType="1" outputQty="9" isnew="1" /}
+          {PE.Label id="2018-热门活动-列表" dataid="m-event-hot" nodeid="12" titleLength="91" linkOpenType="1" outputQty="9" isnew="1" /}
         </div>
         <div class="botpage">
           {PE.Page id="url_动易后台风格_色块" datasource="InfoList_m-event-hot" unitname="场活动" /}
@@ -40,7 +38,7 @@
       <div class="tab-pane fade" id="m-event-last" role="tabpanel" aria-labelledby="m-event-last">
 
         <div class="row">
-          {PE.Label id="2018-热门活动-列表" dataid="m-event-last" nodeid="12" titleLength="31" linkOpenType="1" outputQty="9" isnew="0" /}
+          {PE.Label id="2018-热门活动-列表" dataid="m-event-last" nodeid="12" titleLength="91" linkOpenType="1" outputQty="9" isnew="0" /}
         </div>
         {PE.Page id="url_动易后台风格_色块_外语" datasource="InfoList_m-event-last" unitname="场活动" /}
       </div>
@@ -51,7 +49,7 @@
 
 <div class="g-event-report">
   <div class="container">
-    <h1>原创剧目</h1>
+    <h1 class="m-block-title">原创剧目</h1>
     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
       <li class="nav-item">
         <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">2018全英剧目《鹰井之畔》</a>
@@ -84,7 +82,7 @@
           </div>
         </div>
         <div class="m-performer">
-          <h1>《鹰井之畔》演员表</h1>
+          <h1 class="m-block-title">《鹰井之畔》演员表</h1>
           <div class="row">
             <div class="col">
               <div class="u-img" style="background: url(/public/images/event/img-performer-01.png) no-repeat center center;"></div>
@@ -215,6 +213,8 @@
 </div>
 
 {pe.label id="2018-精彩视频-modal" /}
+
+{pe.label id="2018-全局-右侧咨询菜单" /}
 
 {pe.label id="2018-全局-公共底部" /}
 

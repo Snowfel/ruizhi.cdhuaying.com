@@ -163,8 +163,8 @@ h5 {
     color: @color-blue;
 
     .u-phone {
-      background: url(/public/images/icon/phone-1.png) no-repeat 0 10px;
-      text-indent: 30px;
+      background: url(/public/images/icon/phone-1.png) no-repeat 0 11px;
+      text-indent: 20px;
       line-height: 40px;
     }
   }
@@ -173,7 +173,7 @@ h5 {
 .g-header {
   .m-logo {
     width: 240px;
-    height: 94px;
+    height: 78px;
     background: url(/public/images/icon/logo-hy-ruizhi.png) no-repeat left center;
   }
   .m-nav {
@@ -182,7 +182,7 @@ h5 {
       a {
         font-size: @font-size-xl;
         color: #000;
-        line-height: 92px;
+        line-height: 76px;
         border-bottom: 2px solid rgb(255, 255, 255, 0);
         &:hover,
         &.active {
@@ -485,6 +485,51 @@ h5 {
     }
     .u-modal-teacher-show-intro {
       color: #727171;
+    }
+  }
+}
+
+.g-pop-online {
+  position: fixed;
+  top:110px;
+  right: 30px;
+  &>div {
+    &>a {
+      display: inline-block;
+      width: 84px;
+      height: 84px;
+      background-color: #1f99ae;
+      color: #fff;
+      text-align: center;
+      padding: 50px 0 0;
+      &:hover {
+        background-color: #c2c64b;
+      }
+      &.u-btn1 {
+        background-image: url(/public/images/online/bg1.png);
+        background-position: center 20px;
+        background-repeat: no-repeat;
+      }
+      &.u-btn2 {
+        background-image: url(/public/images/online/bg2.png);
+        background-position: center 20px;
+        background-repeat: no-repeat;
+      }
+      &.u-btn3 {
+        background-image: url(/public/images/online/bg3.png);
+        background-position: center 20px;
+        background-repeat: no-repeat;
+      }
+      &.u-btn4 {
+        background-image: url(/public/images/online/bg4.png);
+        background-position: center 20px;
+        background-repeat: no-repeat;
+      }
+      &.u-btn5 {
+        background-image: url(/public/images/online/bg5.png);
+        background-position: center 20px;
+        background-repeat: no-repeat;
+      }
     }
   }
 }
