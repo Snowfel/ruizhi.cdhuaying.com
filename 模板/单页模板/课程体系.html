@@ -66,7 +66,7 @@
         <div class="item item-3-6">Smart English<br>3-6岁</div>
         <div class="item item-7-12">Genius English<br>7-12岁</div>
         <div class="item item-12part"><span style="font-size:24px">12项</span><br><span style="font-size:18px">戏剧能力特训</span></div>
-        <div class="item item-6part"><span style="font-size:24px">6大</span><span style="font-size:18px">核心</span><br><span style="font-size:18px">戏剧排演课程</span></div>
+        <div class="item item-6core"><span style="font-size:24px">6大</span><span style="font-size:18px">核心</span><br><span style="font-size:18px">戏剧排演课程</span></div>
       </div>
     </div>
   </div>
@@ -74,57 +74,67 @@
 
 <script type="text/javascript">
     //js设置样式
-    $('.item-esca').on('mouseenter', function(e) {
+    $('.item-esca').on('mouseenter', function (e) {
         mTips.c.x = 30;
         mTips.c.y = -310;
         mTips.s('<div class="row m-tips-esca"></div>', '');
-    }).on('mouseleave', function(e) {
+    }).on('mouseleave', function (e) {
         mTips.h();
         mTips.c.x = 10;
         mTips.c.y = 10;
     });
-    $('.item-harvard').on('mouseenter', function(e) {
+    $('.item-harvard').on('mouseenter', function (e) {
         mTips.c.x = 30;
         mTips.c.y = -310;
         mTips.s('<div class="row m-tips-harvard"></div>', '');
-    }).on('mouseleave', function(e) {
+    }).on('mouseleave', function (e) {
         mTips.h();
         mTips.c.x = 10;
         mTips.c.y = 10;
     });
-    $('.item-opera').on('mouseenter', function(e) {
+    $('.item-opera').on('mouseenter', function (e) {
         mTips.c.x = 30;
         mTips.c.y = -310;
         mTips.s('<div class="row m-tips-opera"></div>', '');
-    }).on('mouseleave', function(e) {
+    }).on('mouseleave', function (e) {
         mTips.h();
         mTips.c.x = 10;
         mTips.c.y = 10;
     });
-    $('.item-3-6').on('mouseenter', function(e) {
+    $('.item-3-6').on('mouseenter', function (e) {
         mTips.c.x = 30;
         mTips.c.y = -310;
         mTips.s('<div class="row m-tips-3-6"></div>', '');
-    }).on('mouseleave', function(e) {
+    }).on('mouseleave', function (e) {
         mTips.h();
         mTips.c.x = 10;
         mTips.c.y = 10;
     });
-    $('.item-7-12').on('mouseenter', function(e) {
+    $('.item-7-12').on('mouseenter', function (e) {
         mTips.c.x = 30;
         mTips.c.y = -310;
         mTips.s('<div class="row m-tips-7-12"></div>', '');
-    }).on('mouseleave', function(e) {
+    }).on('mouseleave', function (e) {
         mTips.h();
         mTips.c.x = 10;
         mTips.c.y = 10;
     });
 
-    $('.item-12part').on('mouseenter', function(e) {
+    $('.item-12part').on('mouseenter', function (e) {
         mTips.c.x = 30;
         mTips.c.y = -310;
         mTips.s('<div class="row m-tips-12part"></div>', '');
-    }).on('mouseleave', function(e) {
+    }).on('mouseleave', function (e) {
+        mTips.h();
+        mTips.c.x = 10;
+        mTips.c.y = 10;
+    });
+
+    $('.item-6core').on('mouseenter', function (e) {
+        mTips.c.x = 30;
+        mTips.c.y = -310;
+        mTips.s('<div class="row m-tips-6core"></div>', '');
+    }).on('mouseleave', function (e) {
         mTips.h();
         mTips.c.x = 10;
         mTips.c.y = 10;
@@ -144,7 +154,7 @@
 {pe.label id="2018-全局-底部JS" /}
 
 <script type="text/javascript">
-    $(function() {
+    $(function () {
         $(".nav-name-course").addClass("active");
     });
 </script>
