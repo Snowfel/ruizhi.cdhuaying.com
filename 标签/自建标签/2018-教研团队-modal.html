@@ -16,7 +16,9 @@
             <div class="u-modal-teacher-show-info">
               <div class="u-modal-teacher-show-name"></div>
               <div class="u-modal-teacher-show-title"></div>
-              <div class="u-modal-teacher-show-intro"></div>
+              <div class="u-modal-teacher-show-teachage"></div>
+              <div class="u-modal-teacher-show-education"></div>
+              <div class="u-modal-teacher-show-intro pt-2"></div>
             </div>
           </div>
         </div>
@@ -31,6 +33,8 @@
             $('.modal-teacher-show .u-modal-teacher-show-img').attr('style', 'background:url('+$(this).attr('data-img')+') no-repeat center top; background-size: 100%; height:340px;');
             $('.modal-teacher-show .u-modal-teacher-show-name').html($(this).attr('data-name'));
             $('.modal-teacher-show .u-modal-teacher-show-title').html($(this).attr('data-title'));
+            $('.modal-teacher-show .u-modal-teacher-show-teachage').html('教龄：' + $(this).attr('data-teachage'));
+            $('.modal-teacher-show .u-modal-teacher-show-education').html('毕业院校：' + $(this).attr('data-education'));
             $('.modal-teacher-show .u-modal-teacher-show-intro').html($(this).attr('data-intro'));
         });
         $('.modal-video-show').on('shown.bs.modal', function () {
