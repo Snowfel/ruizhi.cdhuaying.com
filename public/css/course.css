@@ -67,6 +67,8 @@ h1.m-block-title-more .u-more a.u-btn {
 }
 h1.m-block-title-more .u-more a.u-btn:hover {
   text-decoration: none;
+  background: url(/public/images/img-plus-04.png) no-repeat center center;
+  color: #c2c64b;
 }
 h1.m-block-title-more .u-more a.u-btn span {
   display: inline-block;
@@ -515,17 +517,35 @@ h5.modal-title {
 .g-content-edge .container .m-content div {
   color: #727171;
 }
+.g-content-edge .container .m-content:hover h2 {
+  color: #c2c64b;
+}
+.g-content-edge .container .m-content:hover p {
+  border: 1px solid #c2c64b;
+}
 .g-content-edge .container .m-content-1 h1 {
   background: url("/public/images/icon/icon-01.png") no-repeat center center;
+}
+.g-content-edge .container .m-content-1:hover h1 {
+  background: url("/public/images/icon/icon-05.png") no-repeat center center;
 }
 .g-content-edge .container .m-content-2 h1 {
   background: url("/public/images/icon/icon-02.png") no-repeat center center;
 }
+.g-content-edge .container .m-content-2:hover h1 {
+  background: url("/public/images/icon/icon-06.png") no-repeat center center;
+}
 .g-content-edge .container .m-content-3 h1 {
   background: url("/public/images/icon/icon-03.png") no-repeat center center;
 }
+.g-content-edge .container .m-content-3:hover h1 {
+  background: url("/public/images/icon/icon-07.png") no-repeat center center;
+}
 .g-content-edge .container .m-content-4 h1 {
   background: url("/public/images/icon/icon-04.png") no-repeat center center;
+}
+.g-content-edge .container .m-content-4:hover h1 {
+  background: url("/public/images/icon/icon-08.png") no-repeat center center;
 }
 .g-course h1 {
   border-bottom: 1px solid #7a7b80;
@@ -572,7 +592,7 @@ h5.modal-title {
   width: 230px;
   height: 230px;
   line-height: 230px;
-  font-size: 26px;
+  font-size: 24px;
   color: #fff;
   cursor: pointer;
   left: 140px;
@@ -584,7 +604,7 @@ h5.modal-title {
   width: 230px;
   height: 230px;
   line-height: 230px;
-  font-size: 26px;
+  font-size: 24px;
   color: #fff;
   cursor: pointer;
   left: 560px;
@@ -595,7 +615,7 @@ h5.modal-title {
   border-radius: 180px;
   width: 180px;
   height: 180px;
-  line-height: 40px;
+  line-height: 28px;
   padding: 60px 0;
   font-size: 22px;
   color: #fff;
@@ -608,7 +628,7 @@ h5.modal-title {
   border-radius: 200px;
   width: 200px;
   height: 200px;
-  line-height: 40px;
+  line-height: 28px;
   padding: 60px 0;
   font-size: 22px;
   color: #fff;
@@ -621,7 +641,7 @@ h5.modal-title {
   border-radius: 200px;
   width: 200px;
   height: 200px;
-  line-height: 32px;
+  line-height: 28px;
   padding: 60px 0;
   color: #fff;
   cursor: pointer;
@@ -633,7 +653,7 @@ h5.modal-title {
   border-radius: 200px;
   width: 200px;
   height: 200px;
-  line-height: 32px;
+  line-height: 28px;
   padding: 60px 0;
   color: #fff;
   cursor: pointer;

@@ -67,6 +67,8 @@ h1.m-block-title-more .u-more a.u-btn {
 }
 h1.m-block-title-more .u-more a.u-btn:hover {
   text-decoration: none;
+  background: url(/public/images/img-plus-04.png) no-repeat center center;
+  color: #c2c64b;
 }
 h1.m-block-title-more .u-more a.u-btn span {
   display: inline-block;
