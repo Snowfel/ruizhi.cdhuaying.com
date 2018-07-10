@@ -22,7 +22,7 @@ $(function(){
     });
 
     /*锚点平滑滚动*/
-    $('a[href*=#],area[href*=#]').click(function() {
+    $('.a-name-smooth').click(function() {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
             var $target = $(this.hash);
             $target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
