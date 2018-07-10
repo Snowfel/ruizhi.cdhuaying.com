@@ -31,7 +31,7 @@
                         <xsl:value-of select="Intro" />
                     </Intro>
                     <InfoPath>
-                        &lt;div class="col u-content" style="background-image: url(<xsl:value-of select="pe:UpLoadDir()"/><xsl:value-of select="DefaultPicUrl"/>); background-size:100%;"&gt;
+                        &lt;div class="col u-content" style="background-image: url(<xsl:value-of select="pe:UpLoadDir()"/><xsl:value-of select="DefaultPicUrl"/>); background-repeat:no-repeat; background-position: center top; background-size:100%;"&gt;
                         &lt;div class="u-info"&gt;
                         &lt;div class="u-name"&gt;<xsl:value-of select="Title" />&lt;/div&gt;
                         &lt;div class="u-title"&gt;<xsl:value-of select="teacherTitle" />&lt;/div&gt;
