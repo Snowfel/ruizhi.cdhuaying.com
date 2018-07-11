@@ -27,54 +27,70 @@
     </ul>
     <div class="tab-content">
       <div class="tab-pane fade show active" id="m-event-hot" role="tabpanel" aria-labelledby="m-event-hot">
-        <div class="row mb-4">
-          {PE.Label id="2018-热门活动-列表" dataid="m-event-hot" nodeid="12" titleLength="87" linkOpenType="1" outputQty="9" isnew="1" /}
-        </div>
+        <div id="m-event-hot-content" class="row mb-4"></div>
         <div class="container">
-          <div class="row justify-content-md-center">
-            {PE.Page id="url_动易后台风格_睿知" datasource="InfoList_m-event-hot" unitname="场活动" /}
-          </div>
+          <div id="m-event-hot-page" class="row justify-content-md-center"></div>
         </div>
       </div>
 
       <div class="tab-pane fade" id="m-event-last" role="tabpanel" aria-labelledby="m-event-last">
         <div id="m-event-last-content" class="row"></div>
         <div class="container">
-          <div class="row justify-content-md-center"  id="m-event-last-page"></div>
+          <div id="m-event-last-page" class="row justify-content-md-center"></div>
         </div>
         <script type="text/javascript">
 
-            var changepage = function(currentPage, labelName, pageName) {
+            var changepage = function(currentPage, labelName, pageName, para, contenttagid, pagetagid) {
                 var x = new AjaxRequest('XML');
                 x.labelname = labelName;
                 x.currentpage = currentPage;
-                x.para = ['dataid=m-event-last', 'nodeid=12', 'titleLength=87', 'outputQty=9', 'isnew=0', 'page=true'];
+                x.para = eval(para);
                 x.post('updatelabel', '{PE.SiteConfig.ajaxSitePath/}ajax.aspx', function(s) {
                     var xml = x.createXmlDom(s);
-                    document.getElementById('m-event-last-content').innerHTML = xml.getElementsByTagName("body")[0].firstChild.data;
-                    updatepage(labelName, pageName, xml);
+                    document.getElementById(contenttagid).innerHTML = xml.getElementsByTagName("body")[0].firstChild.data;
+                    updatepage(labelName, pageName, xml, pagetagid);
                 });
             };
 
-            var updatepage = function(labelName, pageName, xml) {
+            var updatepage = function(labelName, pageName, xml, pagetagid) {
                 if (parseInt(xml.getElementsByTagName("total")[0].firstChild.data) > 0) {
                     var x = new AjaxRequest('XML');
                     x.labelname = pageName;
                     x.sourcename = labelName;
                     x.total = xml.getElementsByTagName("total")[0].firstChild.data;
-                    console.debug(x.total);
                     x.currentpage = xml.getElementsByTagName("currentpage")[0].firstChild.data;
                     x.pagesize = xml.getElementsByTagName("pagesize")[0].firstChild.data;
                     x.post('updatepage', '{PE.SiteConfig.ajaxSitePath/}ajax.aspx', function(s) {
                         var xml = x.createXmlDom(s);
-                        document.getElementById('m-event-last-page').innerHTML = xml.getElementsByTagName("body")[0].firstChild.data;
+                        document.getElementById(pagetagid).innerHTML = xml.getElementsByTagName("body")[0].firstChild.data;
                     });
                 }
             };
 
             (function() {
-                changepage(1, '2018-热门活动-列表-ajax', 'url-page-ajax');
+                changepage(1, '2018-热门活动-列表-ajax', 'url-page-ajax-', '[\'dataid=m-event-hot\',\'nodeid=12\',\'titleLength=87\',\'isnew=1\',\'page=true\',\'pagesize=9\']', 'm-event-hot-content', 'm-event-hot-page');
+                changepage(1, '2018-热门活动-列表-ajax', 'url-page-ajax', '[\'dataid=m-event-last\',\'nodeid=12\',\'titleLength=87\',\'isnew=0\',\'page=true\',\'pagesize=9\']', 'm-event-last-content', 'm-event-last-page');
             })();
+            $(function(){
+                $("#m-event-hot-page .u-page-change").each(function(i){
+                    $(this).click(function(){
+                        num = $(this).attr('data-pk');
+                        console.debug(num);
+                    });
+                });
+                /*
+                $("#m-event-hot-page .u-page-change").on('click', function () {
+                    num = $(this).attr('data-pk');
+                    console.debug(num);
+                    //changepage(num, '2018-热门活动-列表-ajax', 'url-page-ajax-', '[\'dataid=m-event-hot\',\'nodeid=12\',\'titleLength=87\',\'isnew=1\',\'page=true\',\'pagesize=9\']', 'm-event-hot-content', 'm-event-hot-page');
+                });
+                $("#m-event-last-page .u-page-change").on('click', function () {
+                    num = $(this).attr('data-pk');
+                    console.debug(num);
+                    //changepage(num, '2018-热门活动-列表-ajax', 'url-page-ajax', '[\'dataid=m-event-last\',\'nodeid=12\',\'titleLength=87\',\'isnew=0\',\'page=true\',\'pagesize=9\']', 'm-event-last-content', 'm-event-last-page');
+                });
+                */
+            });
 
         </script>
       </div>
