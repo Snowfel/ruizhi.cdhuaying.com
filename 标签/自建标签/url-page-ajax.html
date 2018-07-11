@@ -1,0 +1,3 @@
+<span onclick="changepage(1,'{$sourcename/}','{$spanname/}');" class="u-ctrl">首页</span>
+{$loop range="3"}<span href="changepage({$pageid/},'{$sourcename/}','{$spanname/}');" class="u-num">{$pageid/}</span> $$$<span class="u-num u-current">{$pageid/}</span> {$/loop}
+<span onclick="changepage({$endid/},'{$sourcename/}','{$spanname/}');" class="u-ctrl">末页</span>

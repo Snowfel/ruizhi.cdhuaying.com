@@ -493,6 +493,30 @@ h5 {
   }
 }
 
+//分页样式
+.pagecss {
+  a,span {
+    display: inline-block;
+    border-radius: 2px;
+    line-height: 26px;
+    padding-right: 9px;
+    padding-left: 9px;
+    cursor: pointer;
+    &.u-num {
+      border: 1px solid @color-main;
+      color: @color-main;
+    }
+    &.u-current {
+      background: @color-main;
+      color: #fff;
+    }
+    &.u-ctrl {
+      border: 1px solid #727171;
+      color: #727171;
+    }
+  }
+}
+
 .g-pop-online {
   position: fixed;
   top:110px;

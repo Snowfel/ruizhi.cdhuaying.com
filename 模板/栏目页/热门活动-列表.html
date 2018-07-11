@@ -3,7 +3,7 @@
 <head>
   <title>{PE.SiteConfig.SiteTitle/} - 热门活动</title>
   {pe.label id="2018-全局-cssjs-上部分" /}
-  <link rel="stylesheet/less" href="/public/css/event.css">
+  <link rel="stylesheet/less" href="/public/css/event.less">
   {pe.label id="2018-全局-cssjs-下部分" /}
 </head>
 <body>
@@ -28,19 +28,55 @@
     <div class="tab-content">
       <div class="tab-pane fade show active" id="m-event-hot" role="tabpanel" aria-labelledby="m-event-hot">
         <div class="row mb-4">
-          {PE.Label id="2018-热门活动-列表" dataid="m-event-hot" nodeid="12" titleLength="91" linkOpenType="1" outputQty="9" isnew="1" /}
+          {PE.Label id="2018-热门活动-列表" dataid="m-event-hot" nodeid="12" titleLength="87" linkOpenType="1" outputQty="9" isnew="1" /}
         </div>
-        <div class="botpage">
-          {PE.Page id="url_动易后台风格_色块" datasource="InfoList_m-event-hot" unitname="场活动" /}
+        <div class="container">
+          <div class="row justify-content-md-center">
+            {PE.Page id="url_动易后台风格_睿知" datasource="InfoList_m-event-hot" unitname="场活动" /}
+          </div>
         </div>
       </div>
 
       <div class="tab-pane fade" id="m-event-last" role="tabpanel" aria-labelledby="m-event-last">
-
-        <div class="row">
-          {PE.Label id="2018-热门活动-列表" dataid="m-event-last" nodeid="12" titleLength="91" linkOpenType="1" outputQty="9" isnew="0" /}
+        <div id="m-event-last-content" class="row"></div>
+        <div class="container">
+          <div class="row justify-content-md-center"  id="m-event-last-page"></div>
         </div>
-        {PE.Page id="url_动易后台风格_色块_外语" datasource="InfoList_m-event-last" unitname="场活动" /}
+        <script type="text/javascript">
+
+            var changepage = function(currentPage, labelName, pageName) {
+                var x = new AjaxRequest('XML');
+                x.labelname = labelName;
+                x.currentpage = currentPage;
+                x.para = ['dataid=m-event-last', 'nodeid=12', 'titleLength=87', 'outputQty=9', 'isnew=0', 'page=true'];
+                x.post('updatelabel', '{PE.SiteConfig.ajaxSitePath/}ajax.aspx', function(s) {
+                    var xml = x.createXmlDom(s);
+                    document.getElementById('m-event-last-content').innerHTML = xml.getElementsByTagName("body")[0].firstChild.data;
+                    updatepage(labelName, pageName, xml);
+                });
+            };
+
+            var updatepage = function(labelName, pageName, xml) {
+                if (parseInt(xml.getElementsByTagName("total")[0].firstChild.data) > 0) {
+                    var x = new AjaxRequest('XML');
+                    x.labelname = pageName;
+                    x.sourcename = labelName;
+                    x.total = xml.getElementsByTagName("total")[0].firstChild.data;
+                    console.debug(x.total);
+                    x.currentpage = xml.getElementsByTagName("currentpage")[0].firstChild.data;
+                    x.pagesize = xml.getElementsByTagName("pagesize")[0].firstChild.data;
+                    x.post('updatepage', '{PE.SiteConfig.ajaxSitePath/}ajax.aspx', function(s) {
+                        var xml = x.createXmlDom(s);
+                        document.getElementById('m-event-last-page').innerHTML = xml.getElementsByTagName("body")[0].firstChild.data;
+                    });
+                }
+            };
+
+            (function() {
+                changepage(1, '2018-热门活动-列表-ajax', 'url-page-ajax');
+            })();
+
+        </script>
       </div>
     </div>
 
@@ -67,7 +103,7 @@
           <div class="row">
             <div class="col-sm-6 px-0">
               <div class="u-video" style="background: url(/public/images/event/img-09.png) center 0 no-repeat; height: 418px;">
-              {pe.label id="2018-精彩视频-列表" nodeid="24" dataid="m-video-hot" outputQty="1" /}
+                {pe.label id="2018-精彩视频-列表" nodeid="24" dataid="m-video-hot" outputQty="1" /}
               </div>
             </div>
             <div class="col-sm-6 m-content pt-5">
