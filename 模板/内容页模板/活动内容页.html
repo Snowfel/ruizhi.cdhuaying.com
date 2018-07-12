@@ -1,0 +1,58 @@
+{PE.DataSource id="cone" datasource="2018-活动内容页-数据源" itemId="@RequestInt_id" xslt="true" /}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{PE.SiteConfig.SiteTitle/} - 课程信息</title>
+  {pe.label id="2018-全局-cssjs-上部分" /}
+  <link rel="stylesheet/less" href="/public/css/class.less">
+  {pe.label id="2018-全局-cssjs-下部分" /}
+  <link rel="stylesheet" href="/public/js/jquery/mTips.css">
+  <script src="/public/js/jquery/mTips.js"></script>
+
+</head>
+<body>
+
+{pe.label id="2018-全局-顶部友情链接" /}
+
+{pe.label id="2018-全局-顶部菜单" /}
+
+{pe.label id="2018-全局-顶部BANNER" /}
+
+<div class="g-breadcrumb">
+  <nav aria-label="breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb">
+        <li class="">当前位置：</li>
+        <li class="breadcrumb-item"><a href="{PE.SiteConfig.sitepath/}">首页</a></li>
+        {PE.Label id="当前位置导航" nodeId="{PE.Field id="cone" fieldname="NodeID" /}" /}
+        <li class="breadcrumb-item active" aria-current="page">{PE.Field id="cone" fieldname="Title" /}</li>
+      </ol>
+    </div>
+  </nav>
+</div>
+
+<div class="g-article-intro pb-5">
+  <div class="container">
+    <h1 class="m-block-title text-center">{PE.Field id="cone" fieldname="title" /}</h1>
+    <div class="m-content py-5">
+      {PE.Field id="cone" fieldname="content" /}
+    </div>
+  </div>
+</div>
+
+{pe.label id="2018-底部-课程预约" /}
+
+{pe.label id="2018-全局-右侧咨询菜单" /}
+
+{pe.label id="2018-全局-公共底部" /}
+
+{pe.label id="2018-全局-底部JS" /}
+
+<script type="text/javascript">
+    $(function() {
+        $(".nav-name-event").addClass("active");
+    });
+</script>
+
+</body>
+</html>

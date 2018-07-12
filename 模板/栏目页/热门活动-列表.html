@@ -68,30 +68,12 @@
             };
 
             (function() {
-                changepage(1, '2018-热门活动-列表-ajax', 'url-page-ajax-', '[\'dataid=m-event-hot\',\'nodeid=12\',\'titleLength=87\',\'isnew=1\',\'page=true\',\'pagesize=9\']', 'm-event-hot-content', 'm-event-hot-page');
-                changepage(1, '2018-热门活动-列表-ajax', 'url-page-ajax', '[\'dataid=m-event-last\',\'nodeid=12\',\'titleLength=87\',\'isnew=0\',\'page=true\',\'pagesize=9\']', 'm-event-last-content', 'm-event-last-page');
+                changepage(1, '2018-热门活动-热门列表-ajax', 'm-event-hot-page-ajax', '[\'dataid=m-event-hot\',\'nodeid=12\',\'titleLength=87\',\'isnew=1\',\'page=true\',\'pagesize=9\']', 'm-event-hot-content', 'm-event-hot-page');
+                changepage(1, '2018-热门活动-往期列表-ajax', 'm-event-last-page-ajax', '[\'dataid=m-event-last\',\'nodeid=12\',\'titleLength=87\',\'isnew=0\',\'page=true\',\'pagesize=9\']', 'm-event-last-content', 'm-event-last-page');
             })();
-            $(function(){
-                $("#m-event-hot-page .u-page-change").each(function(i){
-                    $(this).click(function(){
-                        num = $(this).attr('data-pk');
-                        console.debug(num);
-                    });
-                });
-                /*
-                $("#m-event-hot-page .u-page-change").on('click', function () {
-                    num = $(this).attr('data-pk');
-                    console.debug(num);
-                    //changepage(num, '2018-热门活动-列表-ajax', 'url-page-ajax-', '[\'dataid=m-event-hot\',\'nodeid=12\',\'titleLength=87\',\'isnew=1\',\'page=true\',\'pagesize=9\']', 'm-event-hot-content', 'm-event-hot-page');
-                });
-                $("#m-event-last-page .u-page-change").on('click', function () {
-                    num = $(this).attr('data-pk');
-                    console.debug(num);
-                    //changepage(num, '2018-热门活动-列表-ajax', 'url-page-ajax', '[\'dataid=m-event-last\',\'nodeid=12\',\'titleLength=87\',\'isnew=0\',\'page=true\',\'pagesize=9\']', 'm-event-last-content', 'm-event-last-page');
-                });
-                */
-            });
-
+            function xx(info) {
+                console.debug(info);
+            }
         </script>
       </div>
     </div>
