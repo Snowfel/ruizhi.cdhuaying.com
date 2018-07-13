@@ -18,8 +18,7 @@
                         <xsl:value-of select="pe:CutText(pe:RemoveHtml(Title),$titleLength,'…')" />
                     </Title>
                     <DefaultPicUrl>
-                        &lt;img src="<xsl:value-of select="pe:UpLoadDir()"/>
-                        <xsl:value-of select="DefaultPicUrl"/>" alt="<xsl:value-of select="Title"/>" border="0" /&gt;
+                        &lt;img src="<xsl:value-of select="pe:UpLoadDir()"/><xsl:value-of select="DefaultPicUrl"/>" alt="<xsl:value-of select="Title"/>" border="0" /&gt;
                     </DefaultPicUrl>
                     <linkurl>
                         <xsl:value-of select="linkurl" />
@@ -28,8 +27,9 @@
                         <xsl:value-of select="Intro" />
                     </Intro>
                     <InfoPath>
-                        &lt;a data-url="<xsl:value-of select="linkurl" />" data-title="<xsl:value-of select="Title" />" data-target=".modal-video-show" data-toggle="modal" style="cursor: pointer;"
-                           class="u-btn-show-video-modal d-block"&gt;&lt;/a&gt;
+                        &lt;a data-url="<xsl:value-of select="linkurl" />" data-title="<xsl:value-of select="Title" />" data-img="<xsl:value-of select="pe:UpLoadDir()"/><xsl:value-of select="DefaultPicUrl"/>"
+                        data-target=".modal-video-show" data-toggle="modal"
+                        style="cursor: pointer;" class="u-btn-show-video-modal d-block"&gt;&lt;/a&gt;
                     </InfoPath>
                 </Table>
             </xsl:for-each>

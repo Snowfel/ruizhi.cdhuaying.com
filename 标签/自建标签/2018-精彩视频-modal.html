@@ -33,6 +33,10 @@
       $('.modal-video-show .modal-title').html($(this).attr('data-title'));
       $('#u-video-source').prop('src', $(this).attr('data-url'));
       $('#u-video-source-a').prop('href', $(this).attr('data-url'));
+
+      $('#m-video').prop('poster', $(this).attr('data-img'));
+      $('#u-video-source-a img').prop('src', $(this).attr('data-img'));
+
       videoSrc = $(this).attr('data-url');//新的视频播放地址
       document.getElementById("m-video").src = videoSrc;
     });

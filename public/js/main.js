@@ -39,6 +39,15 @@ $(function(){
             }
         }
     });
+
+    //视频图片点击播放
+    $("#m-video").on('click', function () {
+        if(this.paused){
+            this.play();
+        }else{
+            this.pause();
+        }
+    });
 });
 
 /**

@@ -11,11 +11,11 @@
 
 @font-size-auto: 14px;
 @font-size-sm: @font-size-auto - 2px;
-@font-size-md: @font-size-sm + 2px;
+@font-size-md: @font-size-auto + 2px;
 @font-size-lg: @font-size-md + 2px;
 @font-size-xl: @font-size-lg + 2px;
-@font-size-xxl: @font-size-xl + 4px;
-@font-size-xxxl: @font-size-xxl + 4px;
+@font-size-xxl: @font-size-xl + 2px;
+@font-size-xxxl: @font-size-xxl + 2px;
 
 
 body {
@@ -129,6 +129,12 @@ h5 {
   border: 0;
 }
 
+.u-btn {
+  &:hover {
+    box-shadow: 0px 0px 5px @color-green-light;
+  }
+}
+
 //内容切换标签样式重设
 .nav-pills {
   font-size: @font-size-xl;
@@ -184,7 +190,7 @@ h5 {
     .nav {
       color: #000;
       a {
-        font-size: @font-size-xl;
+        font-size: @font-size-md;
         color: #000;
         line-height: 76px;
         border-bottom: 2px solid rgb(255, 255, 255, 0);
