@@ -7,15 +7,15 @@
 @color-green-light: #82bf34;
 @color-shadow: #1b1e21;
 @color-white: #ececec;
-@color-yellow: #ffd129;
+@color-yellow: #c2c64b;
 
 @font-size-auto: 14px;
-@font-size-sm: @font-size-auto - 2px;
-@font-size-md: @font-size-auto + 2px;
-@font-size-lg: @font-size-md + 2px;
-@font-size-xl: @font-size-lg + 2px;
-@font-size-xxl: @font-size-xl + 2px;
-@font-size-xxxl: @font-size-xxl + 2px;
+@font-size-sm: @font-size-auto - 2px; //12px
+@font-size-md: @font-size-auto; //14px
+@font-size-lg: @font-size-md + 2px; //16px
+@font-size-xl: @font-size-lg + 2px; //18px
+@font-size-xxl: @font-size-xl + 4px; //22px
+@font-size-xxxl: @font-size-xxl + 4px; //26px
 
 
 body {
@@ -95,7 +95,7 @@ h1 {
         &:hover{
           text-decoration: none;
           background: url(/public/images/img-plus-04.png) no-repeat center center;
-          color: #c2c64b;
+          color: @color-yellow;
         }
         span {
           display: inline-block;
@@ -127,12 +127,6 @@ h5 {
 
 .modal-content {
   border: 0;
-}
-
-.u-btn {
-  &:hover {
-    box-shadow: 0px 0px 5px @color-green-light;
-  }
 }
 
 //内容切换标签样式重设
@@ -190,7 +184,7 @@ h5 {
     .nav {
       color: #000;
       a {
-        font-size: @font-size-md;
+        font-size: @font-size-lg;
         color: #000;
         line-height: 76px;
         border-bottom: 2px solid rgb(255, 255, 255, 0);
@@ -260,6 +254,11 @@ h5 {
       line-height: 38px;
       border-radius: 2px;
       cursor: pointer;
+      &:hover {
+        //box-shadow: 0 0 10px @color-yellow;
+        background: @color-yellow;
+        color: #000;
+      }
     }
   }
 }
@@ -528,7 +527,7 @@ h5 {
   top:110px;
   right: 30px;
   &>div {
-    &>a {
+    a {
       display: inline-block;
       width: 84px;
       height: 84px;
@@ -536,8 +535,9 @@ h5 {
       color: #fff;
       text-align: center;
       padding: 50px 0 0;
+      cursor: pointer;
       &:hover {
-        background-color: #c2c64b;
+        background-color: @color-yellow;
       }
       &.u-btn1 {
         background-image: url(/public/images/online/bg1.png);
@@ -563,6 +563,10 @@ h5 {
         background-image: url(/public/images/online/bg5.png);
         background-position: center 16px;
         background-repeat: no-repeat;
+      }
+      span {
+        cursor: pointer;
+        color: #fff;
       }
     }
   }
