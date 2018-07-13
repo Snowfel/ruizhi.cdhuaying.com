@@ -60,6 +60,25 @@
   </div>
 </div>
 
+<link rel="stylesheet" type="text/css" href="/public/css/owl.carousel.css" />
+<script type="text/javascript" src="/public/js/owl.carousel.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $('#m-teacher-marquee').owlCarousel({
+            navigation: true,
+            items:3,
+            autoPlay:true,
+            pagination:true,
+            paginationNumbers:false,
+            responsiveRefreshRate:200,
+            lazyLoad:true,
+            navigationText:['',''],
+            rewindNav:true,
+            slideSpeed:600
+        });
+    });
+</script>
+
 {pe.label id="2018-精彩视频-modal" /}
 
 {pe.label id="2018-教研团队-modal" /}
@@ -69,7 +88,7 @@
 {pe.label id="2018-全局-公共底部" /}
 
 {pe.label id="2018-全局-底部JS" /}
-
+<script src="https://cdn.bootcss.com/jQuery.Marquee/1.5.0/jquery.marquee.js"></script>
 <script type="text/javascript">
     $(".nav-name-index").addClass("active");
 </script>

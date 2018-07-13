@@ -1,14 +1,17 @@
 @import 'main.less';
-
 .g-class-intro {
   .tab-content {
     .m-intro {
       background: #ededed;
       padding: 20px;
+      img {
+        width: 98%;
+      }
       h3 {
         color: #39434b;
         font-size: @font-size-xxl;
         line-height: @font-size-xl * 1.5;
+        padding-top: 20px;
       }
       .u-intro {
         font-size: @font-size-md;
@@ -28,20 +31,22 @@
         a {
           display: inline-block;
           padding: 0 32px;
-          font-size: 18px;
           color: #fff;
+          font-size: 16px;
           background: @color-main;
           border: 2px solid @color-main;
           border-radius: 40px;
-          &:last-child{
+          &:last-child {
             background: transparent;
             color: @color-main;
           }
           &:hover {
-            //box-shadow: 0 0 10px @color-yellow;
             background: @color-yellow;
             border: 2px solid @color-yellow;
-            color: #000;
+
+            &:last-child {
+              color: @color-yellow;
+            }
           }
         }
       }

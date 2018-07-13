@@ -131,7 +131,7 @@ h5 {
 
 //内容切换标签样式重设
 .nav-pills {
-  font-size: @font-size-xl;
+  font-size: @font-size-lg;
   li {
     border-right: 2px solid #2b2d39;
     &:last-child {
@@ -143,6 +143,18 @@ h5 {
       &.active {
         color: @color-main;
         background-color: #fff;
+      }
+    }
+  }
+}
+h1.m-block-title {
+  text-indent: 0;
+}
+.nav-pills{
+  li {
+    &:first-child {
+      a.nav-link {
+        padding-left: 0;
       }
     }
   }
@@ -257,7 +269,6 @@ h5 {
       &:hover {
         //box-shadow: 0 0 10px @color-yellow;
         background: @color-yellow;
-        color: #000;
       }
     }
   }
