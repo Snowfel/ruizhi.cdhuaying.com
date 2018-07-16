@@ -41,7 +41,7 @@
                         &lt;div class="u-intro pb-4"&gt;<xsl:value-of select="pe:CutText(pe:RemoveHtml(feature),$titleLength,'…')" />&lt;/div&gt;
                         &lt;div class="u-age"&gt;适合年龄：<xsl:value-of select="age" />&lt;/div&gt;
                         &lt;div class="u-address"&gt;校区：仁和春天光华店校区&lt;/div&gt;
-                        &lt;div class="u-btn mt-5"&gt;&lt;a href="<xsl:value-of select="pe:GetInfoPath(NodeID,GeneralID,InputTime,PinyinTitle,HtmlPageName)"/>" class="mr-3"&gt;了解详情&lt;/a&gt; &lt;a href="javascript:void(0)" onclick="_MEIQIA('showPanel')"&gt;点击咨询&lt;/a&gt;&lt;/div&gt;
+                        &lt;div class="u-btn mt-5"&gt;&lt;a href="<xsl:value-of select="pe:GetInfoPath(NodeID,GeneralID,InputTime,PinyinTitle,HtmlPageName)"/>" class="mr-3"&gt;了解详情&lt;/a&gt; &lt;a onclick="_MEIQIA('showPanel')"&gt;点击咨询&lt;/a&gt;&lt;/div&gt;
                         &lt;/div&gt;
                         &lt;/div&gt;
                         &lt;/div&gt;
