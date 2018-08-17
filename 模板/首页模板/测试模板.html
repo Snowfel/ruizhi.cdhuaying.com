@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{PE.SiteConfig.SiteTitle/} - 热门活动</title>
+  {pe.label id="2018-全局-cssjs-上部分" /}
+  <link rel="stylesheet/less" href="/public/css/event.less">
+  {pe.label id="2018-全局-cssjs-下部分" /}
+</head>
+<body>
+
+{pe.label id="2018-全局-顶部友情链接" /}
+
+{pe.label id="2018-全局-顶部菜单" /}
+<!--
+{pe.label id="2018-广告-二级页面-顶部切换" nodeid="29" tagid="g-bannaer-teacher" /}
+-->
+<!--
+<div class="g-event-hot">
+  <div class="container">
+    <h1 class="m-block-title">热门活动</h1>
+    <ul class="nav nav-pills my-3" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="pill" href="#m-event-hot" role="tab" aria-controls="m-event-hot" aria-selected="true">热门活动</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="pill" href="#m-event-last" role="tab" aria-controls="m-event-last" aria-selected="false">往期活动</a>
+      </li>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane fade show active" id="m-event-hot" role="tabpanel" aria-labelledby="m-event-hot">
+        <div id="m-event-hot-content" class="row mb-4"></div>
+        <div class="container">
+          <div id="m-event-hot-page" class="row justify-content-md-center"></div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="m-event-last" role="tabpanel" aria-labelledby="m-event-last">
+        <div id="m-event-last-content" class="row"></div>
+        <div class="container">
+          <div id="m-event-last-page" class="row justify-content-md-center"></div>
+        </div>
+        <script type="text/javascript">
+
+            var changepage = function(currentPage, labelName, pageName, para, contenttagid, pagetagid) {
+                var x = new AjaxRequest('XML');
+                x.labelname = labelName;
+                x.currentpage = currentPage;
+                x.para = eval(para);
+                x.post('updatelabel', '{PE.SiteConfig.ajaxSitePath/}ajax.aspx', function(s) {
+                    var xml = x.createXmlDom(s);
+                    document.getElementById(contenttagid).innerHTML = xml.getElementsByTagName("body")[0].firstChild.data;
+                    updatepage(labelName, pageName, xml, pagetagid);
+                });
+            };
+
+            var updatepage = function(labelName, pageName, xml, pagetagid) {
+                if (parseInt(xml.getElementsByTagName("total")[0].firstChild.data) > 0) {
+                    var x = new AjaxRequest('XML');
+                    x.labelname = pageName;
+                    x.sourcename = labelName;
+                    x.total = xml.getElementsByTagName("total")[0].firstChild.data;
+                    x.currentpage = xml.getElementsByTagName("currentpage")[0].firstChild.data;
+                    x.pagesize = xml.getElementsByTagName("pagesize")[0].firstChild.data;
+                    x.post('updatepage', '{PE.SiteConfig.ajaxSitePath/}ajax.aspx', function(s) {
+                        var xml = x.createXmlDom(s);
+                        document.getElementById(pagetagid).innerHTML = xml.getElementsByTagName("body")[0].firstChild.data;
+                    });
+                }
+            };
+
+            (function() {
+                changepage(1, '2018-热门活动-热门列表-ajax', 'm-event-hot-page-ajax', '[\'dataid=m-event-hot\',\'nodeid=12\',\'titleLength=87\',\'isnew=1\',\'page=true\',\'pagesize=9\']', 'm-event-hot-content', 'm-event-hot-page');
+                changepage(1, '2018-热门活动-往期列表-ajax', 'm-event-last-page-ajax', '[\'dataid=m-event-last\',\'nodeid=12\',\'titleLength=87\',\'isnew=0\',\'page=true\',\'pagesize=9\']', 'm-event-last-content', 'm-event-last-page');
+            })();
+            function xx(info) {
+                console.debug(info);
+            }
+        </script>
+      </div>
+    </div>
+
+  </div>
+</div>
+-->
+
+<div class="g-event-report">
+  <div class="container">
+    <h1 class="m-block-title">原创剧目</h1>
+    {pe.label id="2018-原创剧目-子栏目导航-改" nodeid="30" currentid="31" /}
+    <!--
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    {pe.label id="2018-原创剧目-子栏目导航" nodeid="30" currentId="31" /}
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+            <div class="m-video mx-3 pb-4">
+              <div class="row">
+                <div class="col-sm-6 px-0">
+                  <div class="u-video" style="background: url(/public/images/event/img-09.png) center 0 no-repeat; height: 418px;">
+                    {pe.label id="2018-精彩视频-列表" nodeid="24" dataid="m-video-hot" outputQty="1" /}
+                  </div>
+                </div>
+                <div class="col-sm-6 m-content pt-5">
+                  <h3 class="px-3">《鹰井之畔》— 节选</h3>
+                  <div class="py-3 px-3">剧情介绍：<br>
+                    根据诺贝尔文学奖获得者叶芝著名作品《鹰井之畔》进行改编。<br>
+                    2位主人公手捧着叶芝的诗集，轻声诵读着《当你老了》，悄然带领观众进入一个我们所未曾接触过却又似曾相识的世界。<br>
+                    他们与苦苦等待上百年长生不老的老人、小精灵、乐师进行了多次有意义的对话。<br>
+                    通过这部剧，希望孩子与成人更明白，怎么理解坚持、怎么理解等待、怎么理解时间、怎么理解珍惜。
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="m-performer">
+              <h1 class="m-block-title">《鹰井之畔》演员表</h1>
+              <div class="row">
+                <div class="col">
+                  <div class="u-img" style="background: url(/public/images/event/img-performer-01.png) no-repeat center center;"></div>
+                  <div class="u-title">Owen</div>
+                  <div class="u-actor">6岁|饰小精灵</div>
+                </div>
+                <div class="col">
+                  <div class="u-img" style="background: url(/public/images/event/img-performer-02.png) no-repeat center center;"></div>
+                  <div class="u-title">Jason</div>
+                  <div class="u-actor">5岁|饰小精灵</div>
+                </div>
+                <div class="col">
+                  <div class="u-img" style="background: url(/public/images/event/img-performer-03.png) no-repeat center center;"></div>
+                  <div class="u-title">Sophie</div>
+                  <div class="u-actor">3岁|饰小精灵</div>
+                </div>
+                <div class="col">
+                  <div class="u-img" style="background: url(/public/images/event/img-performer-04.png) no-repeat center center;"></div>
+                  <div class="u-title">Blithe</div>
+                  <div class="u-actor">3岁|饰小精灵</div>
+                </div>
+                <div class="col">
+                  <div class="u-img" style="background: url(/public/images/event/img-performer-05.png) no-repeat center center;"></div>
+                  <div class="u-title">Tina</div>
+                  <div class="u-actor">4岁|饰小精灵</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="u-img" style="background: url(/public/images/event/img-performer-06.png) no-repeat center center;"></div>
+                  <div class="u-title">Miki</div>
+                  <div class="u-actor">3岁|饰小精灵</div>
+                </div>
+                <div class="col">
+                  <div class="u-img" style="background: url(/public/images/event/img-performer-07.png) no-repeat center center;"></div>
+                  <div class="u-title"> Ophelia</div>
+                  <div class="u-actor">睿知老师|饰小精灵</div>
+                </div>
+                <div class="col">
+                  <div class="u-img" style="background: url(/public/images/event/img-performer-08.png) no-repeat center center;"></div>
+                  <div class="u-title">Rain</div>
+                  <div class="u-actor">10岁|乐师</div>
+                </div>
+                <div class="col">
+                  <div class="u-img" style="background: url(/public/images/event/img-performer-09.png) no-repeat center center;"></div>
+                  <div class="u-title">Ben</div>
+                  <div class="u-actor">6岁|饰乐师</div>
+                </div>
+                <div class="col">
+                  <div class="u-img" style="background: url(/public/images/event/img-performer-10.png) no-repeat center center;"></div>
+                  <div class="u-title">Cici</div>
+                  <div class="u-actor">9岁|饰乐师</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="u-img" style="background: url(/public/images/event/img-performer-11.png) no-repeat center center;"></div>
+                  <div class="u-title">Leo</div>
+                  <div class="u-actor">6岁|饰乐师</div>
+                </div>
+                <div class="col">
+                  <div class="u-img" style="background: url(/public/images/event/img-performer-12.png) no-repeat center center;"></div>
+                  <div class="u-title">Jennifer</div>
+                  <div class="u-actor">睿知老师|饰乐师</div>
+                </div>
+                <div class="col">
+                  <div class="u-img" style="background: url(/public/images/event/img-performer-13.png) no-repeat center center;"></div>
+                  <div class="u-title">Daniel</div>
+                  <div class="u-actor">6岁|饰小男孩</div>
+                </div>
+                <div class="col">
+                  <div class="u-img" style="background: url(/public/images/event/img-performer-14.png) no-repeat center center;"></div>
+                  <div class="u-title">Kevin</div>
+                  <div class="u-actor">8岁|饰小男孩</div>
+                </div>
+                <div class="col">
+                  <div class="u-img" style="background: url(/public/images/event/img-performer-15.png) no-repeat center center;"></div>
+                  <div class="u-title">Vanessa</div>
+                  <div class="u-actor">睿知老师|饰老人</div>
+                </div>
+              </div>
+            </div>
+            <div class="m-photo">
+              <div class="row m-photo-1 my-3">
+                <div class="col">
+                  <div class="m-info h-100 card-img">
+                    <p></p>
+                    <h3>演职人员名单</h3>
+                    <div>原 著：威廉·巴特勒·叶芝<br>
+                      导 演：叶长海 （上海戏剧学院外国戏剧研究博士）<br>
+                      编 剧：叶长海<br>
+                      剧本翻译：张亚龙<br>
+                      服装设计：苏静（四川音乐学院）<br>
+                      舞台设计：张劲（西南民族大学艺术学院）<br>
+                      特别鸣谢：四川人民艺术剧院黑螺艺术空间<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;成都华樱出国服务股份有限公司
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="">
+                    <img class="card-img" src="/public/images/event/img-02.png" alt="">
+                  </div>
+                </div>
+              </div>
+
+              <div class="m-photo-slide my-3">
+                <div id="centerwell" class="m-slide">
+                  <div class="s" style="background: url(/public/images/event/img-03.png) no-repeat;">
+                    <div class="mask d-none"></div>
+                  </div>
+                  <div class="s" style="background: url(/public/images/event/img-04.png) no-repeat;">
+                    <div class="mask"></div>
+                  </div>
+                  <div class="s" style="background: url(/public/images/event/img-05.png) no-repeat;">
+                    <div class="mask"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row m-photo-3 my-3">
+                <div class="col"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      -->
+  </div>
+</div>
+
+{pe.label id="2018-精彩视频-modal" /}
+
+{pe.label id="2018-全局-右侧咨询菜单" /}
+
+{pe.label id="2018-全局-公共底部" /}
+
+{pe.label id="2018-全局-底部JS" /}
+
+<script type="text/javascript">
+    $(".nav-name-event").addClass("active");
+
+    $('.m-photo-slide .s:first').animate({width: '642px'}, "fast");
+    $('.m-photo-slide .s').mouseenter(function (j) {
+        $('.m-photo-slide .s .mask').addClass('d-block');
+        $(this).children('.mask').removeClass('d-block').addClass('d-none');
+        $(this).stop(true, true).animate({width: '642px'}, '2000').siblings().stop(true, true).animate({width: '224px'}, '2000');
+    });
+</script>
+</body>
+</html>
