@@ -51,6 +51,9 @@
               <xsl:attribute name="class">m-block-title</xsl:attribute>
               <xsl:value-of select="Table/Tips"/>演员表
             </h1>
+            <div class="row">
+              {pe.label id="2018-演员照片-图片循环" nodeid="<xsl:value-of select="$nodeid"/>" /}
+            </div>
           </div>
 
           <div>
